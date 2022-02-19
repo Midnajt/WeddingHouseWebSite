@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -63,28 +63,52 @@ table {
   z-index: -1;
 }
 
-.movie-overlay .obrazek {
-  height: 100%;
-  background-image: url("../Assets/Images/flowers.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.movie-overlay__video {
+  border: 1px dotted orange;
 }
 
 .movie-overlay__titleContainer {
   position: absolute;
-  top: 0;
-  left: 0;
-  border: 2px solid red;
+  top: 1vw;
+  left: 3vw;
+  -webkit-transform: none;
+          transform: none;
+  text-align: center;
 }
 
 .movie-overlay__title {
+  margin: 0;
   font-size: 12px;
   line-height: 1.4;
-  margin: 0;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 8px;
+  font-family: "Libre Baskerville", "arial", serif;
+}
+
+.movie-overlay__big-letter {
+  display: inline-block;
+  font-size: 2rem;
+  letter-spacing: 9px;
+  -webkit-transform: translateY(13.5px);
+          transform: translateY(13.5px);
+}
+
+.movie-overlay__quoteContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.movie-overlay__quote {
+  font-size: 3rem;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: 1vw;
+  font-family: "Libre Baskerville", "arial", serif;
 }
 
 .main {

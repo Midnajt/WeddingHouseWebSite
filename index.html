@@ -10,16 +10,24 @@
 <body>
     <div class="wrapper">
         <section class="section movie-overlay">
-            <div class="obrazek"></div>
+            <!-- <div class="obrazek"></div> -->
+            <video class="movie-overlay__video" autoplay muted loop id="myVideo">
+                <source src="./Assets/video1.mp4" type="video/mp4">
+            </video>
+
             <div class="movie-overlay__titleContainer">
                 <h1 class="movie-overlay__title">
-                    <span class="movie-overlay__big-letter">D</span>
-                    om
-                    <span class="movie-overlay__big-letter">W</span>
-                    eselny
-                    <span class="movie-overlay__big-letter">A</span>
-                    gata
+                    <span class="movie-overlay__big-letter">D</span>om
+                    <span class="movie-overlay__big-letter">W</span>eselny
+                    <span class="movie-overlay__big-letter">A</span>gata
                 </h1>
+            </div>
+            <div class="movie-overlay__quoteContainer">
+                <p class="movie-overlay__quote">
+                    Jest tylko kilka takich chwil
+                    <br>
+                    w całym życiu
+                </p>
             </div>
         </section>
         <section class="section movie">

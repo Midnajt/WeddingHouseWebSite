@@ -10,28 +10,57 @@
         width: 100%;
         z-index: -1;
 
-        .obrazek {
-            height: 100%;
-            background-image: url('../Assets/Images/flowers.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+        // .obrazek {
+        //     height: 100%;
+        //     background-image: url('../Assets/Images/flowers.jpg');
+        //     background-size: cover;
+        //     background-repeat: no-repeat;
+        //     background-position: center;
+        // }
+
+        &__video {
+            border: 1px dotted orange;
         }
 
         &__titleContainer {
             position: absolute;
-            top: 0;
-            left: 0;
-            border: 2px solid red;
+            top: 1vw;
+            left: 3vw;
+            transform: none;
+            text-align: center;
         }
 
         &__title {
+            margin: 0;
             font-size: 12px;
             line-height: 1.4;
-            margin: 0;
             color: #fff;
             text-transform: uppercase;
-            letter-spacing: 8px
+            letter-spacing: 8px;
+            font-family: $special-font;
+        }
+
+        &__big-letter {
+            display: inline-block;
+            font-size: 2rem;
+            letter-spacing: 9px;
+            transform: translateY(13.5px);
+        }
+
+        &__quoteContainer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        &__quote {
+            font-size: 3rem;
+            color: #fff;
+            line-height: 1.2;
+            letter-spacing: 1vw;
+            font-family: $special-font;
         }
     }
 
