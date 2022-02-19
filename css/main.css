@@ -52,49 +52,62 @@ table {
 
 .movie {
   position: relative;
+  height: 100vh;
+  width: 100%;
 }
 
-.movie .item {
+.movie-overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+
+.movie-overlay .obrazek {
+  height: 100%;
+  background-image: url("../Assets/Images/flowers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.movie-overlay__titleContainer {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  padding: 10rem;
+  border: 2px solid red;
 }
 
-.movie__video {
-  position: absolute;
-  max-height: 100vh;
-  width: 100%;
-}
-
-.movie__source {
-  width: 100%;
+.movie-overlay__title {
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 8px;
 }
 
 .main {
   background-color: green;
-  border: 2px solid green;
 }
 
 .offer {
-  border: 2px solid red;
+  background-color: red;
 }
 
 .gallery {
-  border: 2px solid black;
+  background-color: black;
 }
 
 .food {
-  border: 2px solid cyan;
+  background-color: cyan;
 }
 
 .contact {
-  border: 2px solid yellowgreen;
+  background-color: yellowgreen;
 }
 
 .section {
-  height: 500px;
+  min-height: 500px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -9,5 +9,6 @@
 
 .section {
     // position: fixed;
-    height: 500px;
+    min-height: 500px;
+    // z-index: 1;
 }
