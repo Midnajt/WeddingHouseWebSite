@@ -1,0 +1,44 @@
+.menu-screen {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: $white;
+    z-index: 2;
+    border: 1px solid green;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: .4s;
+
+    &.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &__list {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__listItem {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        width: 60%;
+        text-align: center;
+        font-family: $special-font;
+        font-size: 3rem;
+        color: $pink;
+        border-bottom: 1px solid $pink;
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover {
+            color: $black;
+            border-bottom: 1px solid $black;
+        }
+    }
+}

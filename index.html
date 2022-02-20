@@ -9,12 +9,37 @@
 </head>
 <body>
     <div class="wrapper">
+        <section class="menu-screen">
+            <ul class="menu-screen__list">
+                <li class="menu-screen__listItem">
+                    O nas
+                </li>
+                <li class="menu-screen__listItem">
+                    Oferta
+                </li>
+                <li class="menu-screen__listItem">
+                    Galeria
+                </li>
+                <li class="menu-screen__listItem">
+                    Dania
+                </li>
+                <li class="menu-screen__listItem">
+                    Kontakt
+                </li>
+            </ul>
+        </section>
+        <section class="menu-hamburger" id="hamburger">
+            <div class="hamburger">
+                <div class="hamburger__item"></div>
+                <div class="hamburger__item hamburger__item--1"></div>
+                <div class="hamburger__item hamburger__item--2"></div>
+            </div>
+        </section>
         <section class="section movie-overlay">
-            <!-- <div class="obrazek"></div> -->
+            <div class="section movie-overlay movie-overlay--opacity"></div>
             <video class="movie-overlay__video" autoplay muted loop id="myVideo">
                 <source src="./Assets/video1.mp4" type="video/mp4">
             </video>
-
             <div class="movie-overlay__titleContainer">
                 <h1 class="movie-overlay__title">
                     <span class="movie-overlay__big-letter">D</span>om
@@ -24,47 +49,21 @@
             </div>
             <div class="movie-overlay__quoteContainer">
                 <p class="movie-overlay__quote">
-                    Jest tylko kilka takich chwil
+                    Jest kilka takich chwil
                     <br>
                     w całym życiu
                 </p>
             </div>
+            <div class="movie-overlay__scrollContainer">
+                <div class="movie-overlay__scroll">
+                    <div class="movie-overlay__scrollItem"></div>
+                </div>
+                <p class="movie-overlay__scrollTxt">
+                    Przewiń
+                </p>
+            </div>
         </section>
         <section class="section movie">
-            <!-- <div class="videoOverlayContent">
-                <div class="overlayLogo">
-                                <h1><span>A</span>gata <span>D</span>om <span>W</span>eselny</h1>
-                </div>
-                <div class="overlayQuote">
-                                <p class="videoTag" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">Once in a lifetime moments</p>
-                            </div>
-                <div class="overlayScroll">
-                    <a href="#scrollAnchor" class="Smooth_Scroll">
-                        <div class="landingArrow">
-                            <span></span>
-                        </div>
-                        <p>Scroll</p>
-                    </a>
-                </div>
-            </div>
-            <div class="homeVideoBg">
-                <video autoplay muted loop playsinline id="myVideo">
-                  <source src="./Assets/video0.mp4" type="video">
-                </video>
-                <div class="videoOverlay"></div>
-            </div>
-            <div class="videoSpacing"></div> -->
-            <!-- <div class="menuLinkBox">
-                <div class="menuLink">
-                    <div class="menuButtonBox">
-                        <span class="menuButton"></span>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <video class="movie__video" autoplay muted loop id="myVideo">
-                <source class="movie__source" src="./Assets/video0.mp4" type="video/mp4">
-            </video> -->
         </section>
         <section class="section main">2</section>
         <section class="section offer">3</section>
