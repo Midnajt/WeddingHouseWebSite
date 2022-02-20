@@ -87,6 +87,11 @@
             position: absolute;
             bottom: 1vw;
             right: 3vw;
+
+            @media (max-width: 500px) {
+                right: 50%;
+                transform: translateX(50%);
+            }
         }
 
         &__scroll {
@@ -112,7 +117,7 @@
         &__scrollTxt {
             color: $white;
             letter-spacing: 2px;
-            font-family: $special-font;
+            font-family: $regular-font;
         }
     }
 }

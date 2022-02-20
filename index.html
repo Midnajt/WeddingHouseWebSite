@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b36313f6e6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Dom_Weselny_Agata_Ciara</title>
 </head>
 <body>
     <div class="wrapper">
         <section class="menu-screen">
             <ul class="menu-screen__list">
-                <li class="menu-screen__listItem">
+                <li class="menu-screen__listItem" data-direction="main" onclick="moveScreen(event)">
                     O nas
                 </li>
-                <li class="menu-screen__listItem">
+                <li class="menu-screen__listItem" data-direction="offer" onclick="moveScreen(event)">
                     Oferta
                 </li>
-                <li class="menu-screen__listItem">
+                <li class="menu-screen__listItem" data-direction="gallery" onclick="moveScreen(event)">
                     Galeria
                 </li>
-                <li class="menu-screen__listItem">
+                <li class="menu-screen__listItem" data-direction="food" onclick="moveScreen(event)">
                     Dania
                 </li>
-                <li class="menu-screen__listItem">
+                <li class="menu-screen__listItem" data-direction="contact" onclick="moveScreen(event)">
                     Kontakt
                 </li>
             </ul>
@@ -54,7 +56,7 @@
                     w całym życiu
                 </p>
             </div>
-            <div class="movie-overlay__scrollContainer">
+            <div class="movie-overlay__scrollContainer" id="scrollBtn">
                 <div class="movie-overlay__scroll">
                     <div class="movie-overlay__scrollItem"></div>
                 </div>
@@ -65,12 +67,27 @@
         </section>
         <section class="section movie">
         </section>
+        <section class="mainMenu">
+            <div class="con mainMenu__con">
+                <div class="mainMenu__logo">
+                    <img class="mainMenu__img" src="./Assets/Images/logo.png" alt="logo">
+                </div>
+                <ul class="menu">
+                    <li class="menu__item" data-direction="main" onclick="moveScreen(event)">O nas</li>
+                    <li class="menu__item"  data-direction="offer" onclick="moveScreen(event)">Oferta</li>
+                    <li class="menu__item"  data-direction="gallery" onclick="moveScreen(event)">Galeria</li>
+                    <li class="menu__item"  data-direction="food" onclick="moveScreen(event)">Dania</li>
+                    <li class="menu__item"  data-direction="contact" onclick="moveScreen(event)">Kontakt</li>
+                </ul>
+            </div>
+        </section>
         <section class="section main">2</section>
         <section class="section offer">3</section>
         <section class="section gallery">4</section>
         <section class="section food">5</section>
         <section class="section contact">6</section>
+        <div class="upBtn"><i class="fas fa-arrow-up"></i></div>
     </div>
-    <script src="./src/Controller.js" type="module"></script>
+    <script src="./src/Controller.js"></script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+.mainMenu {
+    position: sticky;
+    top: 0;
+    background-color: $white;
+
+    &__con {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        height: 75px;
+    }
+
+    &__logo {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 100px;
+        transform: translateY(20px);
+        border-radius: 50px;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+
+        &__item {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:0 2rem;
+            white-space: nowrap;
+            color: $pink;
+            font-family: $regular-font;
+            font-size: 1.2rem;
+            border-right: 1px solid $pink;
+            cursor: pointer;
+
+            @media (max-width: 750px) {
+                padding:0 1rem;
+                font-size: 1rem;
+            }
+
+            @media (max-width: 550px) {
+                display: none;
+            }
+        }
+
+        &__item:last-child{
+            border: none;
+        }
+    }
+}

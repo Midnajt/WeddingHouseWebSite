@@ -1,13 +1,41 @@
 console.log('elo');
 
 const hamburgerBtn = document.querySelector('#hamburger');
+const btn = hamburgerBtn.querySelector('.hamburger')
 
 hamburgerBtn.addEventListener('click', () => {
-    const btn = hamburgerBtn.querySelector('.hamburger')
     const menuScreen = document.querySelector('.menu-screen')
     btn.classList.toggle('cross-animation')
     menuScreen.classList.toggle('show')
 })
+
+document.addEventListener('scroll', function(){
+    const heightToMenu = $('.mainMenu__con').offset().top;
+
+    if(window.scrollY >= heightToMenu){
+        btn.classList.add('bgcColor');
+        // włącz tutaj przycisk przewijający na górę
+    } else {
+        btn.classList.remove('bgcColor');
+        // ukryj przycisk przewijający na górę
+    }
+});
+
+const moveScreen = (e) => {
+
+    if(hamburgerBtn.classList.contains('cross-animation')){
+        hamburgerBtn.click();
+    }
+    const direction = e.target.dataset.direction
+    const chosenSection = document.querySelector(`.${direction}`)
+    $("html, body").animate({ scrollTop: $(chosenSection).offset().top }, 500);
+}
+
+// powrót na górę strony
+
+// $(".upBtn").click(function() {
+//     $("html, body").animate({ scrollTop: 0 }, 500);
+//   });
 
 
 

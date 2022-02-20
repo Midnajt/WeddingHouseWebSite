@@ -3,6 +3,7 @@
 @import 'menu-screen';
 @import 'menu-hamburger';
 @import 'movie';
+@import 'mainMenu';
 @import 'main';
 @import 'offer';
 @import 'gallery';
@@ -13,4 +14,29 @@
     // position: fixed;
     min-height: 500px;
     // z-index: 1;
+}
+
+.con {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.upBtn {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: $white;
+
+
+    // padding: 10px;
+    // height: 55px;
+    // width: 55px;
+    // text-align: center;
+    // background-color: rgba(0,0,0, .5);
+    // transition: .3s;
+    // overflow: hidden;
+    // transform: scale(0);
 }
