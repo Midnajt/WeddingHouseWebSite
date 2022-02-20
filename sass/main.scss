@@ -12,12 +12,13 @@
 
 .section {
     // position: fixed;
-    min-height: 500px;
+    min-height: 200px;
     // z-index: 1;
 }
 
 .con {
     margin: 0 auto;
+    display: flex;
     max-width: 1200px;
 }
 
@@ -40,7 +41,6 @@
     transition: .3s;
 
     &.show {
-        // display: flex;
         transform: scale(1);
         opacity: 1;
     }
