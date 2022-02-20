@@ -1,7 +1,6 @@
-console.log('elo');
-
 const hamburgerBtn = document.querySelector('#hamburger');
 const btn = hamburgerBtn.querySelector('.hamburger')
+const upBtn = document.querySelector('.upBtn')
 
 hamburgerBtn.addEventListener('click', () => {
     const menuScreen = document.querySelector('.menu-screen')
@@ -14,10 +13,10 @@ document.addEventListener('scroll', function(){
 
     if(window.scrollY >= heightToMenu){
         btn.classList.add('bgcColor');
-        // włącz tutaj przycisk przewijający na górę
+        upBtn.classList.add('show');
     } else {
         btn.classList.remove('bgcColor');
-        // ukryj przycisk przewijający na górę
+        upBtn.classList.remove('show');
     }
 });
 
@@ -31,36 +30,6 @@ const moveScreen = (e) => {
     $("html, body").animate({ scrollTop: $(chosenSection).offset().top }, 500);
 }
 
-// powrót na górę strony
-
-// $(".upBtn").click(function() {
-//     $("html, body").animate({ scrollTop: 0 }, 500);
-//   });
-
-
-
-
-// class Controller {
-//     constructor(){
-//         this.init();
-//     }
-
-//     #hamburgerMenu = document.querySelector('#hamburger');
-
-//     init(){
-//         console.log('init');
-//         this.addEvents();
-//     }
-
-//     addEvents(){
-//         console.log('events');
-//         console.log(this.#hamburgerMenu);
-//         this.#hamburgerMenu.addEventListener('click', (event) => {
-//             console.log('klik');
-//             console.log(event.target);
-//         })
-//     }
-// }
-
-// const controller = new Controller();
-
+$(upBtn).click(function() {
+    $("html, body").animate({ scrollTop: $('.main').offset().top }, 500);
+});

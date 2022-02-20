@@ -496,6 +496,92 @@ table {
   right: 1rem;
   width: 50px;
   height: 50px;
-  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50px;
+  background-color: #f5f5f5;
+  -webkit-box-shadow: 0 0 5px #f5f5f5;
+          box-shadow: 0 0 5px #f5f5f5;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.upBtn.show {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.upBtn i {
+  font-size: 1.5rem;
+  color: #9d7f84;
+  -webkit-animation: up 2s infinite ease;
+          animation: up 2s infinite ease;
+}
+
+@-webkit-keyframes up {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+  }
+  50.1% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  75% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes up {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+  }
+  50.1% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  75% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 /*# sourceMappingURL=main.css.map */

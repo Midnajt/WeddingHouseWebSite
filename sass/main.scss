@@ -27,16 +27,51 @@
     right: 1rem;
     width: 50px;
     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50px;
     background-color: $white;
+    box-shadow: 0 0 5px $white;
+    transform: scale(0);
+    opacity: 0;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .3s;
 
+    &.show {
+        // display: flex;
+        transform: scale(1);
+        opacity: 1;
+    }
 
-    // padding: 10px;
-    // height: 55px;
-    // width: 55px;
-    // text-align: center;
-    // background-color: rgba(0,0,0, .5);
-    // transition: .3s;
-    // overflow: hidden;
-    // transform: scale(0);
+    i {
+        font-size: 1.5rem;
+        color: $pink;
+        animation: up 2s infinite ease;
+    }
+}
+
+@keyframes up {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-150%);
+    }
+    50.1% {
+        transform: translateY(150%);
+    }
+
+    75% {
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
 }
