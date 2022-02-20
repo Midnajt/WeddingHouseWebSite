@@ -1,3 +1,62 @@
 .gallery {
-    background-color: black;
+    background-color: $white;
+    position: relative;
+
+    &__h2 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-family: $special-font;
+        text-align: center;
+        font-style: italic;
+        color: darken($pink, 30%);
+    }
+
+    &__con {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 1rem;
+        height: 300px;
+        overflow: hidden;
+        border: 1px solid $pink;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transition: .3s;
+
+        &.show {
+            padding-bottom: 2rem;
+            height: auto;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+
+    &__imgCon {
+        flex-basis: 30%;
+        margin: 1rem;
+        border: 1px solid $pink;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__showMore {
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 75px);
+        width: 150px;
+        background-color: $pink;
+        color: $black;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 2rem;
+        font-family: $regular-font;
+        border: none;
+        border-radius: none;
+        cursor: pointer;
+    }
 }

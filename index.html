@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b36313f6e6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/main.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
     <title>Dom_Weselny_Agata_Ciara</title>
+
+    <!-- <meta property="og:image" content="https://turbofinder-test.cermotor.com.pl/images/yuma.jpg"> -->
+    <!-- <link rel="icon" href="Images/paw.png" type="image/gif" sizes="16x16"> -->
+    <link rel="stylesheet" href="css/lightbox.min.css">
 </head>
 <body>
     <div class="wrapper">
@@ -153,11 +157,37 @@
                 </span>
             </div>
         </section>
-        <section class="section gallery">4</section>
+        <section class="section gallery">
+            <h2 class="gallery__h2">Galeria</h2>
+            <div class="con gallery__con">
+                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
+                </a>
+                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
+                </a>
+                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
+                </a>
+                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
+                </a>
+                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
+                </a>
+                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
+                </a>
+            </div>
+            <button class="gallery__showMore" id="galleryBtn">
+                Pokaż więcej
+            </button>
+        </section>
         <section class="section food">5</section>
         <section class="section contact">6</section>
         <div class="upBtn"><i class="fas fa-arrow-up"></i></div>
     </div>
-    <script src="./src/Controller.js"></script>
+    <script src='./src/lightbox-plus-jquery.js'></script>
+    <script src="./src/controller.js"></script>
 </body>
 </html>

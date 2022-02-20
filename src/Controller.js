@@ -1,6 +1,7 @@
 const hamburgerBtn = document.querySelector('#hamburger');
 const btn = hamburgerBtn.querySelector('.hamburger')
 const upBtn = document.querySelector('.upBtn')
+const galleryBtn = document.querySelector('#galleryBtn')
 
 hamburgerBtn.addEventListener('click', () => {
     const menuScreen = document.querySelector('.menu-screen')
@@ -10,8 +11,6 @@ hamburgerBtn.addEventListener('click', () => {
 
 document.addEventListener('scroll', function(){
     const heightToMenu = $('.mainMenu__con').offset().top;
-    // const heightToOffer = $('.offer').offset().top;
-    // console.log(heightToOffer);
 
     if(window.scrollY >= heightToMenu){
         btn.classList.add('bgcColor');
@@ -20,13 +19,6 @@ document.addEventListener('scroll', function(){
         btn.classList.remove('bgcColor');
         upBtn.classList.remove('show');
     }
-
-    // if (window.scrollY >= heightToOffer){
-    //     console.log('spełnił warunek');
-    //     $('.offer__h2').addClass('show');
-    // } else {
-    //     $('.offer__h2').removeClass('show');
-    // }
 });
 
 const moveScreen = (e) => {
@@ -42,3 +34,13 @@ const moveScreen = (e) => {
 $(upBtn).click(function() {
     $("html, body").animate({ scrollTop: $('.main').offset().top }, 500);
 });
+
+// lighbox/galeria
+lightbox.option({
+    'resizeDuration': 150,
+    'wrapAround': true
+})
+
+galleryBtn.addEventListener('click', () => {
+    document.querySelector('.gallery__con').classList.toggle('show');
+})
