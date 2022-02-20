@@ -1,6 +1,6 @@
 .gallery {
     background-color: $white;
-    position: relative;
+    padding-bottom: 2rem;
 
     &__h2 {
         margin-bottom: 1rem;
@@ -12,6 +12,7 @@
     }
 
     &__con {
+        position: relative;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -22,9 +23,9 @@
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         transition: .3s;
+        box-shadow: 0 5px 5px -2px lightgrey;
 
         &.show {
-            padding-bottom: 2rem;
             height: auto;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
@@ -37,6 +38,18 @@
         border: 1px solid $pink;
         border-radius: 10px;
         overflow: hidden;
+
+        @media (max-width: 1000px) {
+            flex-basis: 40%;
+        }
+
+        @media (max-width: 440px) {
+            flex-basis: 80%;
+        }
+
+        @media (max-width: 360px) {
+            flex-basis: 100%;
+        }
     }
 
     &__img {
@@ -49,11 +62,11 @@
         bottom: 0;
         left: calc(50% - 75px);
         width: 150px;
-        background-color: $pink;
-        color: $black;
-        font-weight: bold;
+        background-color: darken($pink,30%);
+        color: $white;
         text-transform: uppercase;
         line-height: 2rem;
+        letter-spacing: 2px;
         font-family: $regular-font;
         border: none;
         border-radius: none;

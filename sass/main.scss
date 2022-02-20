@@ -12,7 +12,7 @@
 
 .section {
     // background-color: $white;
-    min-height: 200px;
+    // min-height: 200px;
     // z-index: 1;
 }
 
@@ -33,7 +33,7 @@
     justify-content: center;
     border-radius: 50px;
     background-color: $white;
-    box-shadow: 0 0 5px $white;
+    box-shadow: 0 0 5px grey;
     transform: scale(0);
     opacity: 0;
     cursor: pointer;
