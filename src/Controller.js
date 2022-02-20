@@ -54,20 +54,16 @@ const chagneFoodBgc = () => {
     time = time.replace('s','000')
     let img = 0;
 
+
+    // ERROR, DO POPRAWY ****
     setInterval(() => {
-        if(img >= 7){
+        if(img >= 6){
             img = 0;
         }
         foodImg.src = foodImg.src.replace(`food${img}`, `food${img+1}`)
         img++;
 
     }, time);
-
-
-
-
-
-    // console.log(object);
 }
 
 chagneFoodBgc();

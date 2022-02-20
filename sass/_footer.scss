@@ -1,0 +1,26 @@
+.footer {
+    font-family: $regular-font;
+    background-color: $black;
+    font-weight: normal;
+
+    &__con {
+        align-items: center;
+        justify-content: space-around;
+
+        @media (max-width: 550px) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        margin: 1rem;
+        color: $white;
+        text-decoration: none;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            color: $pink;
+        }
+    }
+}

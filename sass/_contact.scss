@@ -1,3 +1,58 @@
 .contact {
-    background-color: $black;
+    background-color: $white;
+
+    &__con {
+        // margin-top: 10rem;
+        padding: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    &__item {
+        flex-basis: 48%;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+
+        &--left {
+            padding: 1rem;
+            background-color: rgba(250,250,250, .7);
+            border: 1px solid $pink;
+
+            @media (max-width: 440px) {
+                flex-direction: column;
+            }
+        }
+
+        &--right {
+            margin-top: 2rem;
+            width: 100%;
+            height: 600px;
+        }
+    }
+
+    &__title {
+        flex-basis: 100%;
+        margin: 3rem 0;
+        font-size: 2rem;
+        font-family: $special-font;
+        text-align: center;
+        font-style: italic;
+        color: darken($pink,30%);
+    }
+
+    &__img {
+        margin-right: 1rem;
+        width: 20px;
+    }
+    &__text {
+        flex-basis: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: .5rem 0;
+        font-family: $regular-font;
+    }
 }
