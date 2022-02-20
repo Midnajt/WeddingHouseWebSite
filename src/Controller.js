@@ -10,6 +10,8 @@ hamburgerBtn.addEventListener('click', () => {
 
 document.addEventListener('scroll', function(){
     const heightToMenu = $('.mainMenu__con').offset().top;
+    // const heightToOffer = $('.offer').offset().top;
+    // console.log(heightToOffer);
 
     if(window.scrollY >= heightToMenu){
         btn.classList.add('bgcColor');
@@ -18,11 +20,18 @@ document.addEventListener('scroll', function(){
         btn.classList.remove('bgcColor');
         upBtn.classList.remove('show');
     }
+
+    // if (window.scrollY >= heightToOffer){
+    //     console.log('spełnił warunek');
+    //     $('.offer__h2').addClass('show');
+    // } else {
+    //     $('.offer__h2').removeClass('show');
+    // }
 });
 
 const moveScreen = (e) => {
-
-    if(hamburgerBtn.classList.contains('cross-animation')){
+    if(btn.classList.contains('cross-animation')){
+        console.log('warunek spełniony');
         hamburgerBtn.click();
     }
     const direction = e.target.dataset.direction

@@ -2,6 +2,12 @@
     background-color: $white;
     padding-bottom: 2rem;
 
+    &__con {
+        @media (max-width: 550px) {
+            flex-direction: column;
+        }
+    }
+
     &__element {
         padding: 1rem;
         flex-basis: 50%;
@@ -50,6 +56,7 @@
 
         &--small {
             padding-left: 0;
+            padding-bottom: 1rem;
             font-size: 1rem;
             color: darken($pink, 30%);
             font-weight: normal;
@@ -59,8 +66,10 @@
 
     &__text {
         font-family: $regular-font;
+        padding-right: 1rem;
 
         &--bold {
+            // padding: 0;
             margin-bottom: 1rem;
             font-weight: bold;
         }
