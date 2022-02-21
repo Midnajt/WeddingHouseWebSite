@@ -42,6 +42,7 @@ lightbox.option({
 })
 
 galleryBtn.addEventListener('click', () => {
+    $("html, body").animate({ scrollTop: $('.gallery__con').offset().top -200 }, 500);
     document.querySelector('.gallery__con').classList.toggle('show');
 })
 
