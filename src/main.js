@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     })
 
     galleryBtn.addEventListener('click', () => {
-        $("html, body").animate({ scrollTop: $('.gallery__con').offset().top -200 }, 500);
+        $("html, body").animate({ scrollTop: $('.gallery__con').offset().top -150 }, 500);
         const galleryCon = document.querySelector('.gallery__con');
         galleryCon.classList.toggle('show');
 
