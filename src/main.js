@@ -64,6 +64,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
         setInterval(() => {
             if(img >= 6){
                 img = 0;
+                foodImg.src = foodImg.src.replace(`food${img}`, `food${img+1}`)
             }
             foodImg.src = foodImg.src.replace(`food${img}`, `food${img+1}`)
             img++;
