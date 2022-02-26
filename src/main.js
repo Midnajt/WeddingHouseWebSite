@@ -28,7 +28,7 @@ const moveScreen = (e) => {
     }
     const direction = e.target.dataset.direction
     const chosenSection = document.querySelector(`.${direction}`)
-    $("html, body").animate({ scrollTop: $(chosenSection).offset().top }, 500);
+    $("html, body").animate({ scrollTop: $(chosenSection).offset().top -90 }, 500);
 }
 
 $(upBtn).click(function() {
@@ -41,7 +41,7 @@ lightbox.option({
 })
 
 galleryBtn.addEventListener('click', () => {
-    $("html, body").animate({ scrollTop: $('.gallery__con').offset().top -150 }, 500);
+    $("html, body").animate({ scrollTop: $('.gallery__con').offset().top -90 }, 500);
     const galleryCon = document.querySelector('.gallery__con');
     galleryCon.classList.toggle('show');
 
