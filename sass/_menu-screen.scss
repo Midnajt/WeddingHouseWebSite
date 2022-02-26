@@ -33,6 +33,7 @@
         color: $pink;
         border-bottom: 1px solid $pink;
         transition: .3s;
+        user-select: none;
         cursor: pointer;
 
         &:hover {

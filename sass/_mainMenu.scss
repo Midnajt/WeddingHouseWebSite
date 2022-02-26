@@ -43,6 +43,7 @@
             font-family: $regular-font;
             font-size: 1.2rem;
             border-right: 1px solid $pink;
+            user-select: none;
             cursor: pointer;
 
             @media (max-width: 750px) {

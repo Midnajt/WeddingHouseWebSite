@@ -99,6 +99,10 @@ table {
   border-bottom: 1px solid #9d7f84;
   -webkit-transition: .3s;
   transition: .3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
 }
 
@@ -443,6 +447,10 @@ table {
   font-family: "Roboto", "arial", serif;
   font-size: 1.2rem;
   border-right: 1px solid #9d7f84;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
 }
 
