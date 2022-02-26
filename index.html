@@ -2,76 +2,79 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta property="og:image" content="./assets/Images/flowers.jpg">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://kit.fontawesome.com/b36313f6e6.js" crossorigin="anonymous"></script> -->
+    <meta name="description" content="Dom Weselny Agata w Raszynie blisko Warszawy. Organizacja wesel, chrzciń, spotkań firmowych i konferencji">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Dom_Weselny_Agata_Ciara</title>
-    <link rel="icon" href="./Assets/Icons/favicon.svg">
+    <title>Dom Weselny Agata</title>
+    <link rel="icon" href="./assets/Icons/favicon.svg">
     <link rel="stylesheet" href="css/lightbox.min.css">
 </head>
 <body>
     <div class="wrapper">
-        <section class="menu-screen">
-            <ul class="menu-screen__list">
-                <li class="menu-screen__listItem" data-direction="main" onclick="moveScreen(event)">
-                    O nas
-                </li>
-                <li class="menu-screen__listItem" data-direction="offer" onclick="moveScreen(event)">
-                    Oferta
-                </li>
-                <li class="menu-screen__listItem" data-direction="gallery" onclick="moveScreen(event)">
-                    Galeria
-                </li>
-                <li class="menu-screen__listItem" data-direction="food" onclick="moveScreen(event)">
-                    Dania
-                </li>
-                <li class="menu-screen__listItem" data-direction="contact" onclick="moveScreen(event)">
-                    Kontakt
-                </li>
-            </ul>
-        </section>
-        <section class="menu-hamburger" id="hamburger">
-            <div class="hamburger">
-                <div class="hamburger__item"></div>
-                <div class="hamburger__item hamburger__item--1"></div>
-                <div class="hamburger__item hamburger__item--2"></div>
-            </div>
-        </section>
-        <section class="section movie-overlay">
-            <div class="section movie-overlay movie-overlay--opacity"></div>
-            <video class="movie-overlay__video" autoplay muted loop id="myVideo">
-                <source src="./Assets/video1.mp4" type="video/mp4">
-            </video>
-            <div class="movie-overlay__titleContainer">
-                <h1 class="movie-overlay__title">
-                    <span class="movie-overlay__big-letter">D</span>om
-                    <span class="movie-overlay__big-letter">W</span>eselny
-                    <span class="movie-overlay__big-letter">A</span>gata
-                </h1>
-            </div>
-            <div class="movie-overlay__quoteContainer">
-                <p class="movie-overlay__quote">
-                    Jest kilka takich chwil
-                    <br>
-                    w całym życiu
-                </p>
-            </div>
-            <div class="movie-overlay__scrollContainer" id="scrollBtn">
-                <div class="movie-overlay__scroll">
-                    <div class="movie-overlay__scrollItem"></div>
+        <header>
+            <section class="menu-screen">
+                <ul class="menu-screen__list">
+                    <li class="menu-screen__listItem" data-direction="main" onclick="moveScreen(event)">
+                        O nas
+                    </li>
+                    <li class="menu-screen__listItem" data-direction="offer" onclick="moveScreen(event)">
+                        Oferta
+                    </li>
+                    <li class="menu-screen__listItem" data-direction="gallery" onclick="moveScreen(event)">
+                        Galeria
+                    </li>
+                    <li class="menu-screen__listItem" data-direction="food" onclick="moveScreen(event)">
+                        Dania
+                    </li>
+                    <li class="menu-screen__listItem" data-direction="contact" onclick="moveScreen(event)">
+                        Kontakt
+                    </li>
+                </ul>
+            </section>
+            <section class="menu-hamburger" id="hamburger">
+                <div class="hamburger">
+                    <div class="hamburger__item"></div>
+                    <div class="hamburger__item hamburger__item--1"></div>
+                    <div class="hamburger__item hamburger__item--2"></div>
                 </div>
-                <p class="movie-overlay__scrollTxt">
-                    Przewiń
-                </p>
-            </div>
-        </section>
-        <section class="section movie">
-        </section>
-        <section class="mainMenu">
+            </section>
+            <section class="section movie-overlay">
+                <div class="section movie-overlay movie-overlay--opacity"></div>
+                <video class="movie-overlay__video" autoplay muted loop id="myVideo">
+                    <source src="././assets/video1.mp4" type="video/mp4">
+                </video>
+                <div class="movie-overlay__titleContainer">
+                    <h1 class="movie-overlay__title">
+                        <span class="movie-overlay__big-letter">D</span>om
+                        <span class="movie-overlay__big-letter">W</span>eselny
+                        <span class="movie-overlay__big-letter">A</span>gata
+                    </h1>
+                </div>
+                <div class="movie-overlay__quoteContainer">
+                    <p class="movie-overlay__quote">
+                        Jest kilka takich chwil
+                        <br>
+                        w całym życiu
+                    </p>
+                </div>
+                <div class="movie-overlay__scrollContainer" id="scrollBtn">
+                    <div class="movie-overlay__scroll">
+                        <div class="movie-overlay__scrollItem"></div>
+                    </div>
+                    <p class="movie-overlay__scrollTxt">
+                        Przewiń
+                    </p>
+                </div>
+            </section>
+            <section class="section movie">
+            </section>
+        </header>
+        <nav class="mainMenu">
             <div class="con mainMenu__con">
                 <div class="mainMenu__logo">
-                    <img class="mainMenu__img" src="./Assets/Images/logo.png" alt="logo">
+                    <img class="mainMenu__img" src="././assets/Images/logo.png" alt="logo">
                 </div>
                 <ul class="menu">
                     <li class="menu__item" data-direction="main" onclick="moveScreen(event)">O nas</li>
@@ -81,188 +84,191 @@
                     <li class="menu__item"  data-direction="contact" onclick="moveScreen(event)">Kontakt</li>
                 </ul>
             </div>
-        </section>
-        <section class="section main">
-            <div class="con main__con">
-                <div class="main__element main__element">
-                    <div class="main__imgBorder">
-                        <img src="./Assets/Images/flowers.jpg" alt="flowers" class="main__img">
-                    </div>
-                </div>
-                <div class="main__element main__element--right">
-                    <div class="main__item main__item--main">
-                        <p class="main__quote main__quote--color">Skup się</p>
-                        <p class="main__quote main__quote--darken">na tym dniu,</p>
-                        <p class="main__quote main__quote--small">resztę pozostaw nam...</p>
-                    </div>
-                    <div class="main__item">
-                        <p class="main__text main__text--bold">Jesteśmy firmą rodzinną</p>
-                        <p class="main__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, vero!</p>
-                    </div>
-                    <div class="main__item">
-                        <p class="main__text main__text--bold">Jesteśmy firmą rodzinną</p>
-                        <p class="main__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, vero!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section offer">
-            <div class="offer__bgc">
-                <div class="offer__bgc--opacity"></div>
-                <h2 class="offer__h2">Agata - dom weselny</h2>
-                <h2 class="offer__h2 offer__h2--second">Śluby, komunie, chrzciny, konferencje, Raszyn</h2>
-            </div>
-            <div class="con offer__con">
-                <span class="offer__item">
-                    <div class="offer__element">
-                        <img src="./Assets/Images/couple1.jpg" alt="" class="offer__elementImg">
-                        <div class="offer__info">
-                            <h2 class="offer__elementTitle">
-                                Wesela
-                            </h2>
-                            <p class="offer__infoText">
-                                Zbliża się jeden z najpiękniejszych dni Waszego życia, a my jesteśmy po to, by wspomnienia tych chwil na zawsze pozostały w Waszej pamięci.
-                            </p>
+        </nav>
+        <main>
+            <section class="section main">
+                <div class="con main__con">
+                    <div class="main__element main__element">
+                        <div class="main__imgBorder">
+                            <img src="././assets/Images/flowers.jpg" alt="flowers" class="main__img">
                         </div>
                     </div>
-                </span>
-                <span class="offer__item">
-                    <div class="offer__element">
-                        <img src="./Assets/Images/bible.jpg" alt="" class="offer__elementImg">
-                        <div class="offer__info">
-                            <h2 class="offer__elementTitle">
-                                Komunie, chrzciny
-                            </h2>
-                            <p class="offer__infoText">
-                                Maj, czerwiec to miesiące Komunii Świętych, które są jednym z najważniejszych wydarzeń w życiu katolickim dla każdego dziecka jak i dla całej rodziny
-                            </p>
+                    <div class="main__element main__element--right">
+                        <div class="main__item main__item--main">
+                            <p class="main__quote main__quote--color">Skup się</p>
+                            <p class="main__quote main__quote--darken">na tym dniu,</p>
+                            <p class="main__quote main__quote--small">resztę pozostaw nam...</p>
+                        </div>
+                        <div class="main__item">
+                            <p class="main__text main__text--bold">Jesteśmy firmą rodzinną</p>
+                            <p class="main__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, vero!</p>
+                        </div>
+                        <div class="main__item">
+                            <p class="main__text main__text--bold">Jesteśmy firmą rodzinną</p>
+                            <p class="main__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, vero!</p>
                         </div>
                     </div>
-                </span>
-                <span class="offer__item">
-                    <div class="offer__element">
-                        <img src="./Assets/Images/conference.jpg" alt="" class="offer__elementImg">
-                        <div class="offer__info">
-                            <h2 class="offer__elementTitle">
-                                Konferencje
-                            </h2>
-                            <p class="offer__infoText">
-                                Sala konferencyjna pod Warszawą, na organizacje szkoleń, spotkań firmowych lub spotkań biznesowych.
-                            </p>
+                </div>
+            </section>
+            <section class="section offer">
+                <div class="offer__bgc">
+                    <div class="offer__bgc--opacity"></div>
+                    <h2 class="offer__h2">Agata - dom weselny</h2>
+                    <h2 class="offer__h2 offer__h2--second">Śluby, komunie, chrzciny, konferencje, Raszyn</h2>
+                </div>
+                <div class="con offer__con">
+                    <span class="offer__item">
+                        <div class="offer__element">
+                            <img src="././assets/Images/couple1.jpg" alt="" class="offer__elementImg">
+                            <div class="offer__info">
+                                <h2 class="offer__elementTitle">
+                                    Wesela
+                                </h2>
+                                <p class="offer__infoText">
+                                    Zbliża się jeden z najpiękniejszych dni Waszego życia, a my jesteśmy po to, by wspomnienia tych chwil na zawsze pozostały w Waszej pamięci.
+                                </p>
+                            </div>
                         </div>
+                    </span>
+                    <span class="offer__item">
+                        <div class="offer__element">
+                            <img src="././assets/Images/bible.jpg" alt="" class="offer__elementImg">
+                            <div class="offer__info">
+                                <h2 class="offer__elementTitle">
+                                    Komunie, chrzciny
+                                </h2>
+                                <p class="offer__infoText">
+                                    Maj, czerwiec to miesiące Komunii Świętych, które są jednym z najważniejszych wydarzeń w życiu katolickim dla każdego dziecka jak i dla całej rodziny
+                                </p>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="offer__item">
+                        <div class="offer__element">
+                            <img src="././assets/Images/conference.jpg" alt="" class="offer__elementImg">
+                            <div class="offer__info">
+                                <h2 class="offer__elementTitle">
+                                    Konferencje
+                                </h2>
+                                <p class="offer__infoText">
+                                    Sala konferencyjna pod Warszawą, na organizacje szkoleń, spotkań firmowych lub spotkań biznesowych.
+                                </p>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </section>
+            <section class="section gallery">
+                <h2 class="gallery__h2">Galeria</h2>
+                <div class="con gallery__con">
+                    <a class="gallery__imgCon" href="./assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                        <img class="gallery__img" loading="lazy" src="./assets/Images/couple0.jpg" alt="photo"/>
+                    </a>
+                    <a class="gallery__imgCon" href="./assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                        <img class="gallery__img" loading="lazy" src="./assets/Images/couple0.jpg" alt="photo"/>
+                    </a>
+                    <a class="gallery__imgCon" href="./assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                        <img class="gallery__img" loading="lazy" src="./assets/Images/couple0.jpg" alt="photo"/>
+                    </a>
+                    <a class="gallery__imgCon" href="./assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                        <img class="gallery__img" loading="lazy" src="./assets/Images/couple0.jpg" alt="photo"/>
+                    </a>
+                    <a class="gallery__imgCon" href="./assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                        <img class="gallery__img" loading="lazy" src="./assets/Images/couple0.jpg" alt="photo"/>
+                    </a>
+                    <a class="gallery__imgCon" href="./assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                        <img class="gallery__img" loading="lazy" src="./assets/Images/couple0.jpg" alt="photo"/>
+                    </a>
+                    <a class="gallery__imgCon" href="./assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                        <img class="gallery__img" loading="lazy" src="./assets/Images/couple0.jpg" alt="photo"/>
+                    </a>
+                    <a class="gallery__imgCon" href="./assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                        <img class="gallery__img" loading="lazy" src="./assets/Images/couple0.jpg" alt="photo"/>
+                    </a>
+                    <a class="gallery__imgCon" href="./assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
+                        <img class="gallery__img" loading="lazy" src="./assets/Images/couple0.jpg" alt="photo"/>
+                    </a>
+                    <button class="gallery__showMore" id="galleryBtn">
+                        Pokaż więcej
+                    </button>
+                </div>
+                <h2 class="gallery__h2 gallery__h2--ourMenu">Nasze menu</h2>
+            </section>
+            <section class="section food">
+                <img src="././assets/Food/food0.jpg" alt="foodImage" class="food__bgc"id="foodImg">
+                <div class="con food__con">
+                    <div class="food__element">
+                        <h2 class="food__h2">Zupy</h2>
+                        <ul class="food__list">
+                            <li class="food__item">Rosół</li>
+                            <li class="food__item">Flaki</li>
+                            <li class="food__item">Boeuf stroganow</li>
+                            <li class="food__item">Barszcz czerwony</li>
+                            <li class="food__item">Flaki</li>
+                            <li class="food__item">Boeuf stroganow</li>
+                            <li class="food__item">Barszcz czerwony</li>
+                        </ul>
                     </div>
-                </span>
-            </div>
-        </section>
-        <section class="section gallery">
-            <h2 class="gallery__h2">Galeria</h2>
-            <div class="con gallery__con">
-                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
-                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
-                </a>
-                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
-                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
-                </a>
-                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
-                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
-                </a>
-                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
-                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
-                </a>
-                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
-                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
-                </a>
-                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
-                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
-                </a>
-                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
-                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
-                </a>
-                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
-                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
-                </a>
-                <a class="gallery__imgCon" href="Assets/Images/couple0.jpg" data-lightbox="gallery" data-title="Zmień zdjęcie używając strzałek">
-                    <img class="gallery__img" loading="lazy" src="Assets/Images/couple0.jpg" alt="photo"/>
-                </a>
-                <button class="gallery__showMore" id="galleryBtn">
-                    Pokaż więcej
-                </button>
-            </div>
-        </section>
-        <section class="section food">
-            <img src="./Assets/Food/food0.jpg" alt="foodImage" class="food__bgc"id="foodImg">
-            <div class="con food__con">
-                <div class="food__element">
-                    <h2 class="food__h2">Zupy</h2>
-                    <ul class="food__list">
-                        <li class="food__item">Rosół</li>
-                        <li class="food__item">Flaki</li>
-                        <li class="food__item">Boeuf stroganow</li>
-                        <li class="food__item">Barszcz czerwony</li>
-                        <li class="food__item">Flaki</li>
-                        <li class="food__item">Boeuf stroganow</li>
-                        <li class="food__item">Barszcz czerwony</li>
-                    </ul>
+                    <div class="food__element">
+                        <h2 class="food__h2">Dania główne</h2>
+                        <ul class="food__list">
+                            <li class="food__item">Schab</li>
+                            <li class="food__item">Burger</li>
+                            <li class="food__item">Dzikun</li>
+                            <li class="food__item">Koń</li>
+                            <li class="food__item">Schab</li>
+                            <li class="food__item">Burger</li>
+                            <li class="food__item">Dzikun</li>
+                            <li class="food__item">Koń</li>
+                            <li class="food__item">Schab</li>
+                            <li class="food__item">Burger</li>
+                            <li class="food__item">Dzikun</li>
+                            <li class="food__item">Koń</li>
+                        </ul>
+                    </div>
+                    <div class="food__element">
+                        <h2 class="food__h2">Przystawki</h2>
+                        <ul class="food__list">
+                            <li class="food__item">Schab w galarecie</li>
+                            <li class="food__item">Ryba po grecku</li>
+                            <li class="food__item">Śledzie</li>
+                            <li class="food__item">Paluszki</li>
+                            <li class="food__item">Owoce</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="food__element">
-                    <h2 class="food__h2">Dania główne</h2>
-                    <ul class="food__list">
-                        <li class="food__item">Schab</li>
-                        <li class="food__item">Burger</li>
-                        <li class="food__item">Dzikun</li>
-                        <li class="food__item">Koń</li>
-                        <li class="food__item">Schab</li>
-                        <li class="food__item">Burger</li>
-                        <li class="food__item">Dzikun</li>
-                        <li class="food__item">Koń</li>
-                        <li class="food__item">Schab</li>
-                        <li class="food__item">Burger</li>
-                        <li class="food__item">Dzikun</li>
-                        <li class="food__item">Koń</li>
-                    </ul>
+            </section>
+            <section class="section contact">
+                <div class="con contact__con">
+                    <h2 class="contact__title">Zapraszamy do kontaktu</h2>
+                    <div class="contact__item contact__item--left">
+                        <p class="contact__text">Aleja Krakowska 22a</p>
+                        <p class="contact__text">05-900 Raszyn</p>
+                        <a href="tel:+48 608-022-187" class="contact__text contact__text--pointer">
+                            <img src="././assets/Icons/phone.svg" alt="phoneNumber" class="contact__img">
+                            +48 608-022-187
+                        </a>
+                        <a href="tel:22) 720 32 22" class="contact__text contact__text--pointer">
+                            <img src="././assets/Icons/phone.svg" alt="phoneNumber" class="contact__img">
+                            (22) 720 32 22
+                        </a>
+                        <a href="meilto:salaweselna@oit.pl" class="contact__text contact__text--pointer">
+                            <img src="././assets/Icons/message.svg" alt="phoneNumber" class="contact__img">
+                            salaweselna@oit.pl
+                        </a>
+                    </div>
+                    <div class="contact__item contact__item--right">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9791.845400274413!2d20.9200127!3d52.1532126!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb12df62756f65aa9!2sPa%C5%82ac%20Agata!5e0!3m2!1spl!2spl!4v1645378512849!5m2!1spl!2spl" width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
                 </div>
-                <div class="food__element">
-                    <h2 class="food__h2">Przystawki</h2>
-                    <ul class="food__list">
-                        <li class="food__item">Schab w galarecie</li>
-                        <li class="food__item">Ryba po grecku</li>
-                        <li class="food__item">Śledzie</li>
-                        <li class="food__item">Paluszki</li>
-                        <li class="food__item">Owoce</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="section contact">
-            <div class="con contact__con">
-                <h2 class="contact__title">Zapraszamy do kontaktu</h2>
-                <div class="contact__item contact__item--left">
-                    <p class="contact__text">Aleja Krakowska 22a</p>
-                    <p class="contact__text">05-900 Raszyn</p>
-                    <p class="contact__text">
-                        <img src="./Assets/Icons/phone.svg" alt="phoneNumber" class="contact__img">
-                        +48 608-022-187
-                    </p>
-                    <p class="contact__text">
-                        <img src="./Assets/Icons/phone.svg" alt="phoneNumber" class="contact__img">
-                        (22) 720 32 22
-                    </p>
-                    <p class="contact__text">
-                        <img src="./Assets/Icons/message.svg" alt="phoneNumber" class="contact__img">
-                        salaweselna@oit.pl
-                    </p>
-                </div>
-                <div class="contact__item contact__item--right">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9791.845400274413!2d20.9200127!3d52.1532126!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb12df62756f65aa9!2sPa%C5%82ac%20Agata!5e0!3m2!1spl!2spl!4v1645378512849!5m2!1spl!2spl" width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
         <footer class="footer">
             <div class="con footer__con">
-                <a class="footer__item" href="#" target="_blank">
+                <a class="footer__item" href="././assets/polityka_prywatnosci.pdf" target="_blank">
                     Polityka prywatności
                 </a>
-                <a class="footer__item" href="#" target="_blank">
+                <a class="footer__item" href="tel:22) 720 32 22" target="_blank">
                     &copy Dom Weselny Agata
                 </a>
                 <a class="footer__item" href="https://pl.linkedin.com/in/marcin-krzysztoszek-a7851116b" target="_blank">
@@ -270,7 +276,7 @@
                 </a>
             </div>
         </footer>
-        <div class="upBtn"><img src="./Assets/Icons/arrowIcon2.svg" alt="arrowIcon" class="upBtn__img"></div>
+        <div class="upBtn"><img src="././assets/Icons/arrowIcon2.svg" alt="arrowIcon" class="upBtn__img"></div>
     </div>
     <script src='./src/lightbox-plus-jquery.js'></script>
     <script src="./src/main.js"></script>

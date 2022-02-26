@@ -11,6 +11,10 @@
 @import 'contact';
 @import 'footer';
 
+.section{
+    min-height: 65vh;
+}
+
 .con {
     margin: 0 auto;
     display: flex;
