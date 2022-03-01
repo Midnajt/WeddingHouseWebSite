@@ -52,23 +52,23 @@ galleryBtn.addEventListener('click', () => {
     }
 })
 
-const chagneFoodBgc = () => {
-    const foodImg = document.querySelector('#foodImg');
-    foodImg.classList.add('animation')
-    let time = getComputedStyle(foodImg).animationDuration;
-    time = time.replace('s','000')
-    let img = 0;
+// const chagneFoodBgc = () => {
+//     const foodImg = document.querySelector('#foodImg');
+//     foodImg.classList.add('animation')
+//     let time = getComputedStyle(foodImg).animationDuration;
+//     time = time.replace('s','000')
+//     let img = 0;
 
-    // ***
-    setInterval(() => {
-        if(img >= 6){
-            img = 0;
-            foodImg.src = foodImg.src.replace(`food${img}`, `food${img+1}`)
-        }
-        foodImg.src = foodImg.src.replace(`food${img}`, `food${img+1}`)
-        img++;
+//     // ***
+//     setInterval(() => {
+//         if(img >= 6){
+//             img = 0;
+//             foodImg.src = foodImg.src.replace(`food${img}`, `food${img+1}`)
+//         }
+//         foodImg.src = foodImg.src.replace(`food${img}`, `food${img+1}`)
+//         img++;
 
-    }, time);
-}
+//     }, time);
+// }
 
-chagneFoodBgc();
+// chagneFoodBgc();
