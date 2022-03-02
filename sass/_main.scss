@@ -5,7 +5,7 @@
     background-color: $white;
 
     &__con {
-        @media (max-width: 550px) {
+        @media (max-width: 650px) {
             flex-direction: column;
         }
     }
@@ -13,6 +13,10 @@
     &__element {
         padding: 1rem;
         flex-basis: 50%;
+
+        @media (max-width: 550px) {
+            padding: 2rem;
+        }
 
         &--right {
             display: flex;
