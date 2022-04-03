@@ -51,5 +51,3 @@ galleryBtn.addEventListener('click', () => {
         galleryBtn.innerText = 'Pokaż więcej';
     }
 })
-
-console.log('js');

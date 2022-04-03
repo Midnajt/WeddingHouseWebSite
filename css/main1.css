@@ -563,6 +563,7 @@ table {
 .main__text {
   font-family: "Roboto", "arial", serif;
   padding-right: 1rem;
+  line-height: 1.3rem;
 }
 
 .main__text--bold {
