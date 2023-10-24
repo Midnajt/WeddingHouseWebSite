@@ -16,6 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6DM40XW7P"></script>
     <script>
+        console.log("%c❤️ Kocham moją przyszłą żonę!", "color: red; font-size: 24px;");
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {
@@ -56,6 +57,18 @@
             max-width: 100%;
         }
 
+        .section--newYear {
+            padding-bottom: 3rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section--newYear img {
+            max-width: 90%;
+            border-radius:4px;
+            box-shadow: 0 0 5px black;
+        }
+
     </style>
 </head>
 
@@ -69,6 +82,9 @@
                     </li>
                     <li class="menu-screen__listItem" data-direction="offer" onclick="moveScreen(event)">
                         Oferta
+                    </li>
+                    <li class="menu-screen__listItem" data-direction="newYear" onclick="moveScreen(event)">
+                        Sylwester
                     </li>
                     <li class="menu-screen__listItem" data-direction="gallery" onclick="moveScreen(event)">
                         Galeria
@@ -124,6 +140,7 @@
                 <ul class="menu">
                     <li class="menu__item" data-direction="main" onclick="moveScreen(event)">O nas</li>
                     <li class="menu__item" data-direction="offer" onclick="moveScreen(event)">Oferta</li>
+                    <li class="menu__item" data-direction="newYear" onclick="moveScreen(event)">Sylwester</li>
                     <li class="menu__item" data-direction="gallery" onclick="moveScreen(event)">Galeria</li>
                     <li class="menu__item" data-direction="contact" onclick="moveScreen(event)">Kontakt</li>
                 </ul>
@@ -212,6 +229,9 @@
                         </div>
                     </span>
                 </div>
+                <section class="section section--newYear newYear">
+                    <img src="./Assets/Images/newYear.png" alt="newYearInfo">
+                </section>
             </section>
             <section class="section gallery">
                 <h2 class="gallery__h2">Galeria</h2>
