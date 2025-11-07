@@ -60,7 +60,10 @@
         .section--newYear {
             padding-bottom: 3rem;
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
+            gap: 1.5rem;
             background: #F5F5F5;
         }
 
@@ -69,6 +72,17 @@
             max-width: 90%;
             border-radius:4px;
             box-shadow: 0 0 5px black;
+        }
+
+        @media (min-width: 768px) {
+            .section--newYear {
+                flex-direction: row;
+                gap: 2rem;
+            }
+
+            .section--newYear img {
+                max-width: 45%;
+            }
         }
 
     </style>
@@ -237,6 +251,7 @@
             <!-- oferta sylwestrowa -->
             <section class="section section--newYear newYear">
                 <img src="./Assets/Images/newYear2.jpg" alt="newYearInfo">
+                <img src="./Assets/Images/newYear3.jpg" alt="newYearInfo">
             </section>
             <section class="section gallery">
                 <h2 class="gallery__h2">Galeria</h2>
