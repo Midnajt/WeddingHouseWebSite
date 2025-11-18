@@ -592,8 +592,6 @@ table {
   align-items: center;
   gap: 1.5rem;
   clear: both;
-  position: relative;
-  z-index: 1;
 }
 .newYear__casinoText {
   font-size: 1.2rem;
