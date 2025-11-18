@@ -542,6 +542,7 @@ table {
   box-shadow: 0 0 5px black;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 .newYear > a:hover {
   transform: scale(1.02);
@@ -552,6 +553,7 @@ table {
   height: 100%;
   display: block;
   border-radius: 4px;
+  object-fit: contain;
 }
 .newYear > img {
   max-height: 920px;
@@ -564,27 +566,36 @@ table {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
   }
   .newYear > a {
     max-width: 45%;
     flex-shrink: 0;
+    margin-bottom: 2rem;
   }
   .newYear > img {
     max-width: 45%;
     flex-shrink: 0;
+    margin-bottom: 2rem;
   }
   .newYear > .newYear__casino {
     width: 100%;
     flex-basis: 100%;
+    margin-top: 1rem;
+    order: 3;
   }
 }
 .newYear__casino {
   width: 100%;
   padding: 2rem 1rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  clear: both;
+  position: relative;
+  z-index: 1;
 }
 .newYear__casinoText {
   font-size: 1.2rem;
