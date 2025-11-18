@@ -51,3 +51,36 @@ galleryBtn.addEventListener("click", () => {
     galleryBtn.innerText = "Pokaż więcej";
   }
 });
+
+// Animacja emotikonek w sekcji sylwestrowej
+const casinoIcons = document.querySelectorAll(".newYear__casinoTextIcon");
+if (casinoIcons.length > 0) {
+  const animateRandomIcon = () => {
+    // Usuń klasę sparkle ze wszystkich ikon
+    casinoIcons.forEach(icon => icon.classList.remove("sparkle"));
+    
+    // Losowo wybierz jedną ikonę
+    const randomIndex = Math.floor(Math.random() * casinoIcons.length);
+    const randomIcon = casinoIcons[randomIndex];
+    
+    // Dodaj klasę sparkle do wybranej ikony
+    randomIcon.classList.add("sparkle");
+    
+    // Usuń klasę po zakończeniu animacji
+    setTimeout(() => {
+      randomIcon.classList.remove("sparkle");
+    }, 1200);
+  };
+
+  // Uruchom animację co 1-3 sekundy
+  const scheduleNextAnimation = () => {
+    const delay = Math.random() * 2000 + 1000; // 1-3 sekundy
+    setTimeout(() => {
+      animateRandomIcon();
+      scheduleNextAnimation();
+    }, delay);
+  };
+
+  // Rozpocznij animację
+  scheduleNextAnimation();
+}
