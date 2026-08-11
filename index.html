@@ -2,478 +2,471 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta property="og:image" content="./Assets/Photos/default/photo0.jpg">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Dom Weselny Agata w Raszynie blisko Warszawy. Organizacja wesel, chrzciń, spotkań firmowych i konferencji">
-    <link rel="stylesheet" href="./css/main1.css">
-    <title>Dom Weselny Agata</title>
-    <link rel="icon" href="./Assets/Icons/favicon.svg">
-    <link rel="stylesheet" href="css/lightbox.min.css">
-
-    <script>
-        console.log("%c❤️ Kocham moją przyszłą żonę!", "color: red; font-size: 24px;");
-    </script>
-    <style>
-        .colaborationItem {
-            margin: 0.5rem 0;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
-            max-width: 100%;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .colaborationItem__img {
-            max-width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta property="og:image" content="./Assets/Photos/default/photo0.jpg">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Dom Weselny Agata w Raszynie blisko Warszawy. Organizacja wesel, chrzciń, spotkań firmowych i konferencji">
+  <title>Dom Weselny Agata</title>
+  <link rel="icon" href="./Assets/Icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.css">
+  <link rel="stylesheet" href="./css/site.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-accent: #9d7f84;
+      --color-accent-hover: #b09498;
+      --color-ink: #252525;
+      --color-paper: #f7f4f2;
+      --color-muted: #8a8582;
+      --font-display: "Fraunces", ui-serif, Georgia, serif;
+      --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
 </head>
 
-<body>
-    <div class="wrapper">
-        <header>
-            <section class="menu-screen">
-                <ul class="menu-screen__list">
-                    <li class="menu-screen__listItem" data-direction="main" onclick="moveScreen(event)">
-                        O nas
-                    </li>
-                    <li class="menu-screen__listItem" data-direction="offer" onclick="moveScreen(event)">
-                        Oferta
-                    </li>
-                    <!-- oferta sylwestrowa -->
-                    <!-- <li class="menu-screen__listItem" data-direction="newYear" onclick="moveScreen(event)">
-                        Sylwester
-                    </li> -->
-                    <li class="menu-screen__listItem" data-direction="gallery" onclick="moveScreen(event)">
-                        Galeria
-                    </li>
-                    <li class="menu-screen__listItem" data-direction="contact" onclick="moveScreen(event)">
-                        Kontakt
-                    </li>
-                </ul>
-            </section>
-            <section class="menu-hamburger" id="hamburger">
-                <div class="hamburger">
-                    <div class="hamburger__item"></div>
-                    <div class="hamburger__item hamburger__item--1"></div>
-                    <div class="hamburger__item hamburger__item--2"></div>
-                </div>
-            </section>
-            <section class="section movie-overlay">
-                <div class="section movie-overlay movie-overlay--opacity"></div>
-                <video class="movie-overlay__video" autoplay muted loop id="myVideo">
-                    <source src="./Assets/video1.mp4" type="video/mp4">
-                </video>
-                <div class="movie-overlay__titleContainer">
-                    <h1 class="movie-overlay__title">
-                        <span class="movie-overlay__big-letter">D</span>om
-                        <span class="movie-overlay__big-letter">W</span>eselny
-                        <span class="movie-overlay__big-letter">A</span>gata
-                    </h1>
-                </div>
-                <div class="movie-overlay__quoteContainer">
-                    <p class="movie-overlay__quote">
-                        Jest kilka takich chwil
-                        <br>
-                        w całym życiu
-                    </p>
-                </div>
-                <div class="movie-overlay__scrollContainer" id="scrollBtn">
-                    <div class="movie-overlay__scroll">
-                        <div class="movie-overlay__scrollItem"></div>
-                    </div>
-                    <p class="movie-overlay__scrollTxt">
-                        Przewiń
-                    </p>
-                </div>
-            </section>
-            <section class="section movie">
-            </section>
-        </header>
-        <nav class="mainMenu">
-            <div class="con mainMenu__con">
-                <div class="mainMenu__logo">
-                    <img loading="lazy" class="mainMenu__img" src="./Assets/Images/logo.png" alt="logo">
-                </div>
-                <ul class="menu">
-                    <li class="menu__item" data-direction="main" onclick="moveScreen(event)">O nas</li>
-                    <li class="menu__item" data-direction="offer" onclick="moveScreen(event)">Oferta</li>
-                    <!-- oferta sylwestrowa -->
-                    <!-- <li class="menu__item" data-direction="newYear" onclick="moveScreen(event)">Sylwester</li> -->
-                    <li class="menu__item" data-direction="gallery" onclick="moveScreen(event)">Galeria</li>
-                    <li class="menu__item" data-direction="contact" onclick="moveScreen(event)">Kontakt</li>
-                </ul>
-            </div>
-        </nav>
-        <main>
-            <section class="section main">
-                <div class="con main__con">
-                    <div class="main__element">
-                        <div class="main__imgBorder">
-                            <img loading="lazy" src="./Assets/Images/flowers.jpg" alt="flowers" class="main__img">
-                        </div>
-                    </div>
-                    <div class="main__element main__element--right">
-                        <div class="main__item main__item--main">
-                            <p class="main__quote main__quote--color">Skup się</p>
-                            <p class="main__quote main__quote--darken">na tym dniu,</p>
-                            <p class="main__quote main__quote--small">resztę pozostaw nam...</p>
-                        </div>
-                        <div class="main__item">
-                            <p class="main__text main__text--bold">Jesteśmy firmą rodzinną</p>
-                            <p class="main__text">Marzymy o tym, by ten dzień był jedyny i niepowtarzalny. Pragniemy
-                                pamięć o nim zachować długo, jak najdłużej i to ze wszystkimi szczegółami. Chcielibyśmy
-                                opowiadać naszym dzieciom, wnukom jak przeżyliśmy nasz pierwszy wspólny dzień.</p>
-                        </div>
-                        <div class="main__item">
-                            <p class="main__text main__text--bold">Więc zadbamy o Was jak o rodzinę</p>
-                            <p class="main__text">Zapraszamy do klimatyzowanej Sali Weselnej gdzie Niezwykły klimat,
-                                fachowa obsługa kucharska i kelnerska zapewnią wspaniałe wspomnienia z uroczystości
-                                weselnej.Państwo Młodzi mogą zaprosić do wspólnej zabawy około 200 osób. Dodatkowo
-                                gratis proponujemy drugą sale na odpoczynek oraz
-                                5 pokoi noclegowych.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section offer">
-                <div class="offer__bgc">
-                    <div class="offer__bgc--opacity"></div>
-                    <h2 class="offer__h2">Agata - dom weselny</h2>
-                    <h2 class="offer__h2 offer__h2--second">Śluby, komunie, chrzciny, konferencje, Raszyn</h2>
-                </div>
-                <div class="con offer__con">
-                    <span class="offer__item">
-                        <div class="offer__element">
-                            <img loading="lazy" src="./Assets/Images/couple1.jpg" alt="couple"
-                                class="offer__elementImg">
-                            <div class="offer__info">
-                                <h2 class="offer__elementTitle">
-                                    Wesela
-                                </h2>
-                                <p class="offer__infoText">
-                                    Zbliża się jeden z najpiękniejszych dni Waszego życia, a my jesteśmy po to, by
-                                    wspomnienia tych chwil na zawsze pozostały w Waszej pamięci.
-                                </p>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="offer__item">
-                        <div class="offer__element">
-                            <img loading="lazy" src="./Assets/Images/bible.jpg" alt="bible" class="offer__elementImg">
-                            <div class="offer__info">
-                                <h2 class="offer__elementTitle">
-                                    Komunie, chrzciny
-                                </h2>
-                                <p class="offer__infoText">
-                                    Maj, czerwiec to miesiące Komunii Świętych, które są jednym z najważniejszych
-                                    wydarzeń w życiu katolickim dla każdego dziecka jak i dla całej rodziny.
-                                </p>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="offer__item">
-                        <div class="offer__element">
-                            <img loading="lazy" src="./Assets/Images/conference.jpg" alt="conference"
-                                class="offer__elementImg">
-                            <div class="offer__info">
-                                <h2 class="offer__elementTitle">
-                                    Konferencje
-                                </h2>
-                                <p class="offer__infoText">
-                                    Sala konferencyjna pod Warszawą, na organizacje szkoleń, spotkań firmowych lub
-                                    spotkań biznesowych.
-                                </p>
-                            </div>
-                        </div>
-                    </span>
-                </div>
-            </section>
-            <!-- oferta sylwestrowa -->
-            <!-- <section class="section section--newYear newYear">
-                <a href="./Assets/Images/newYear2.jpg" data-lightbox="casino-gallery" data-title="Zmień zdjęcie używając strzałek">
-                    <img src="./Assets/Images/newYear2.jpg" alt="newYearInfo">
-                </a>
-                <a href="./Assets/Images/newYear3.jpg" data-lightbox="casino-gallery" data-title="Zmień zdjęcie używając strzałek">
-                    <img src="./Assets/Images/newYear3.jpg" alt="newYearInfo">
-                </a>
-                <div class="newYear__casino">
-                    <p class="newYear__casinoText">
-                        <span class="newYear__casinoTextIcon">🎆</span>
-                        <span class="newYear__casinoTextIcon">🎇</span>
-                        <span class="newYear__casinoTextIcon">✨</span>
-                        Naszą atrakcją podczas Balu Sylwestrowego będzie możliwość poczucia się jak w Kasynie
-                        <span class="newYear__casinoTextIcon">✨</span>
-                        <span class="newYear__casinoTextIcon">🎇</span>
-                        <span class="newYear__casinoTextIcon">🎆</span>
-                    </p>
-                    <div class="con newYear__casinoGallery">
-                        <a class="gallery__imgCon" href="./Assets/Photos/casino/583676418_1337073928113823_3338726810677703616_n.jpg" data-lightbox="casino-gallery"
-                            data-title="Zmień zdjęcie używając strzałek">
-                            <img loading="lazy" class="gallery__img" loading="lazy"
-                                src="./Assets/Photos/casino/583676418_1337073928113823_3338726810677703616_n.jpg" alt="casino" />
-                        </a>
-                        <a class="gallery__imgCon" href="./Assets/Photos/casino/583693355_1337073934780489_337972664917824819_n.jpg" data-lightbox="casino-gallery"
-                            data-title="Zmień zdjęcie używając strzałek">
-                            <img loading="lazy" class="gallery__img" loading="lazy"
-                                src="./Assets/Photos/casino/583693355_1337073934780489_337972664917824819_n.jpg" alt="casino" />
-                        </a>
-                        <a class="gallery__imgCon" href="./Assets/Photos/casino/584245928_1337073938113822_7746912178833902097_n.jpg" data-lightbox="casino-gallery"
-                            data-title="Zmień zdjęcie używając strzałek">
-                            <img loading="lazy" class="gallery__img" loading="lazy"
-                                src="./Assets/Photos/casino/584245928_1337073938113822_7746912178833902097_n.jpg" alt="casino" />
-                        </a>
-                        <a class="gallery__imgCon" href="./Assets/Photos/casino/585235888_1337073924780490_6667418360801498060_n.jpg" data-lightbox="casino-gallery"
-                            data-title="Zmień zdjęcie używając strzałek">
-                            <img loading="lazy" class="gallery__img" loading="lazy"
-                                src="./Assets/Photos/casino/585235888_1337073924780490_6667418360801498060_n.jpg" alt="casino" />
-                        </a>
-                        <a class="gallery__imgCon" href="./Assets/Photos/casino/585235888_1337073924780490_6667418360801498060_n (1).jpg" data-lightbox="casino-gallery"
-                            data-title="Zmień zdjęcie używając strzałek">
-                            <img loading="lazy" class="gallery__img" loading="lazy"
-                                src="./Assets/Photos/casino/585235888_1337073924780490_6667418360801498060_n (1).jpg" alt="casino" />
-                        </a>
-                        <a class="gallery__imgCon" href="./Assets/Photos/casino/585301905_1337073941447155_2631242619456337837_n.jpg" data-lightbox="casino-gallery"
-                            data-title="Zmień zdjęcie używając strzałek">
-                            <img loading="lazy" class="gallery__img" loading="lazy"
-                                src="./Assets/Photos/casino/585301905_1337073941447155_2631242619456337837_n.jpg" alt="casino" />
-                        </a>
-                    </div>
-                </div>
-            </section> -->
-            <section class="section gallery">
-                <h2 class="gallery__h2">Galeria</h2>
-                <div class="con gallery__con">
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo28.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo28.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo29.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo29.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo30.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo30.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo31.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo31.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo32.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo32.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo33.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo33.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo34.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo34.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo5.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo5.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo6.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo6.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo7.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo7.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo8.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo8.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo9.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo9.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo10.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo10.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo11.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo11.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo12.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo12.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo13.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo13.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo14.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo14.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo15.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo15.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo16.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo16.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo17.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo17.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo18.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo18.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo19.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo19.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo20.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo20.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo21.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo21.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo22.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo22.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo23.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo23.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo24.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo24.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo25.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo25.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo26.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo26.jpg" alt="photo" />
-                    </a>
-                    <a class="gallery__imgCon" href="./Assets/Photos/default/photo27.jpg" data-lightbox="gallery"
-                        data-title="Zmień zdjęcie używając strzałek">
-                        <img loading="lazy" class="gallery__img" loading="lazy"
-                            src="./Assets/Photos/miniatures/photo27.jpg" alt="photo" />
-                    </a>
-                    <button class="gallery__showMore" id="galleryBtn">
-                        Pokaż więcej
-                    </button>
-                </div>
-            </section>
-            <section class="section contact">
-                <div class="con contact__con">
-                    <h2 class="contact__title">Zapraszamy do kontaktu</h2>
-                    <div class="contact__item contact__item--left">
-                        <p class="contact__text">Aleja Krakowska 22a</p>
-                        <p class="contact__text">05-090 Raszyn</p>
-                        <a href="tel:+48 608-022-184" class="contact__text contact__text--pointer">
-                            <img loading="lazy" src="./Assets/Icons/phone.svg" alt="phoneNumber" class="contact__img">
-                            +48 608-022-184
-                        </a>
-                        <a href="mailto:kontakt@domweselnyagata.pl" class="contact__text contact__text--pointer">
-                            <img loading="lazy" src="./Assets/Icons/message.svg" alt="email" class="contact__img">
-                            kontakt@domweselnyagata.pl
-                        </a>
-                        <a href="https://www.facebook.com/SalaAgata" target='_blank'
-                            class="contact__text contact__text--pointer">
-                            <img loading="lazy" src="./Assets/Icons/fb_logo.svg" alt="email" class="contact__img">
-                            Polub nas
-                        </a>
-                    </div>
-                    <a class="colaborationItem" href="https://www.weselezklasa.pl/ogloszenia-weselne/sala-weselna-agata,26293/" target="_blank" title="Sala Weselna Agata">
-                        <img class="colaborationItem__img" src="https://www.weselezklasa.pl/banery/Weselezklasa/ogloszenie970x90.gif" alt="Sala Weselna Agata" border="0" />
-                    </a>
-                    <div class="contact__item contact__item--right">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9791.845400274413!2d20.9200127!3d52.1532126!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb12df62756f65aa9!2sPa%C5%82ac%20Agata!5e0!3m2!1spl!2spl!4v1645378512849!5m2!1spl!2spl"
-                            width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="con footer__bottom">
-                <p class="footer__copy">© 2026 Dom Weselny Agata Raszyn · sala weselna</p>
-                <p class="footer__credit">
-                    Strona stworzona przez
-                    <a class="footer__link" href="https://midnajt.github.io/AddPattern.github.io/"
-                        target="_blank" rel="noopener noreferrer">AddPattern</a>
-                    Marcin Krzysztoszek —
-                    <a class="footer__link" href="mailto:midnajt0@gmail.com">kontakt</a>
-                </p>
-                <p class="footer__meta">
-                    <a class="footer__link" href="./polityka-prywatnosci.html">Polityka prywatności</a>
-                </p>
-            </div>
-        </footer>
-        <div class="upBtn"><img loading="lazy" src="./Assets/Icons/arrowIcon2.svg" alt="arrowIcon" class="upBtn__img">
-        </div>
+<body class="bg-paper text-ink">
+  <a href="#onas"
+    class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:bg-paper focus:px-4 focus:py-2">
+    Przejdź do treści
+  </a>
+
+  <!-- Mobile drawer backdrop -->
+  <div class="drawer-backdrop fixed inset-0 z-40 bg-ink/50 md:hidden" data-drawer-backdrop></div>
+
+  <!-- Mobile drawer -->
+  <nav class="drawer fixed inset-y-0 right-0 z-50 flex w-[min(100%,20rem)] flex-col bg-paper px-8 py-10 shadow-2xl md:hidden"
+    data-drawer aria-label="Menu mobilne">
+    <button type="button" class="mb-10 self-end text-sm uppercase tracking-[0.2em] text-muted" data-drawer-close>
+      Zamknij
+    </button>
+    <ul class="flex flex-col gap-6 font-display text-3xl text-accent">
+      <li><a href="#onas" data-nav-link class="transition hover:text-ink">O nas</a></li>
+      <li><a href="#oferta" data-nav-link class="transition hover:text-ink">Oferta</a></li>
+      <li><a href="#galeria" data-nav-link class="transition hover:text-ink">Galeria</a></li>
+      <li><a href="#kontakt" data-nav-link class="transition hover:text-ink">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <header class="relative h-svh min-h-[32rem] overflow-hidden">
+    <div class="absolute inset-0 z-0" data-parallax data-parallax-speed="0.25">
+      <div class="absolute inset-0 z-10 bg-black/35"></div>
+      <video class="h-full w-full object-cover" autoplay muted loop playsinline id="myVideo">
+        <source src="./Assets/video1.mp4" type="video/mp4">
+      </video>
     </div>
 
-    <div class="consent-banner" data-consent-banner role="dialog" aria-modal="false"
-        aria-labelledby="consent-title" aria-describedby="consent-desc" hidden>
-        <div class="consent-banner__inner">
-            <div class="consent-banner__text">
-                <h2 id="consent-title" class="consent-banner__title">Zgoda na pliki cookies i przetwarzanie danych</h2>
-                <p id="consent-desc" class="consent-banner__desc">
-                    Korzystamy z plików cookies oraz przetwarzamy dane zgodnie z informacją RODO i
-                    <a href="./polityka-prywatnosci.html">polityką prywatności</a>.
-                    Aby kontynuować, potwierdź zgodę poniżej.
-                </p>
-            </div>
-            <button type="button" class="consent-banner__btn" data-consent-accept>Wyrażam zgodę</button>
-        </div>
-    </div>
+    <div class="relative z-20 flex h-full flex-col px-5 pt-6 sm:px-8">
+      <h1 class="font-display text-[0.7rem] uppercase tracking-[0.35em] text-paper sm:text-sm">
+        <span class="inline-block translate-y-1 text-2xl tracking-[0.2em] sm:text-3xl">D</span>om
+        <span class="inline-block translate-y-1 text-2xl tracking-[0.2em] sm:text-3xl">W</span>eselny
+        <span class="inline-block translate-y-1 text-2xl tracking-[0.2em] sm:text-3xl">A</span>gata
+      </h1>
 
-    <script src='./src/lightbox-plus-jquery.js'></script>
-    <script src="./src/main.js"></script>
-    <script src="./src/consent.js"></script>
+      <div class="hero-quote-enter absolute left-1/2 top-1/2 w-[min(92vw,36rem)] -translate-x-1/2 -translate-y-1/2 text-center">
+        <p class="font-display text-3xl leading-tight tracking-wide text-paper sm:text-5xl">
+          Jest kilka takich chwil<br>w całym życiu
+        </p>
+      </div>
+
+      <button type="button" id="scrollBtn" data-scroll-to="#onas"
+        class="scroll-cue absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-paper/90 transition hover:text-paper">
+        <span class="h-10 w-px bg-paper/70"></span>
+        <span class="font-sans text-xs uppercase tracking-[0.25em]">Przewiń</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="sticky top-0 z-30 border-b border-accent/15 bg-paper/85 backdrop-blur-md" data-site-nav>
+    <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:h-[4.5rem] sm:px-6">
+      <a href="#" class="flex items-center gap-3" data-scroll-to="top" aria-label="Dom Weselny Agata — góra strony">
+        <img src="./Assets/Images/logo.png" alt="Logo Dom Weselny Agata" class="h-12 w-12 rounded-full object-cover sm:h-14 sm:w-14">
+        <span class="font-display text-lg text-ink sm:text-xl">Agata</span>
+      </a>
+
+      <ul class="hidden items-center gap-8 font-sans text-sm font-medium tracking-wide text-accent md:flex">
+        <li><a href="#onas" data-nav-link class="transition hover:text-ink">O nas</a></li>
+        <li><a href="#oferta" data-nav-link class="transition hover:text-ink">Oferta</a></li>
+        <li><a href="#galeria" data-nav-link class="transition hover:text-ink">Galeria</a></li>
+        <li><a href="#kontakt" data-nav-link class="transition hover:text-ink">Kontakt</a></li>
+      </ul>
+
+      <button type="button"
+        class="flex h-11 w-11 flex-col items-center justify-center gap-1.5 md:hidden"
+        data-drawer-open aria-label="Otwórz menu" aria-expanded="false">
+        <span class="block h-0.5 w-6 bg-ink transition" data-burger-line></span>
+        <span class="block h-0.5 w-6 bg-ink transition" data-burger-line></span>
+        <span class="block h-0.5 w-6 bg-ink transition" data-burger-line></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- O nas -->
+    <section id="onas" class="scroll-mt-24 px-4 py-16 sm:px-6 sm:py-24">
+      <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-2 md:items-center md:gap-16">
+        <div class="reveal overflow-hidden">
+          <img src="./Assets/Images/flowers.jpg" alt="Dekoracje kwiatowe" class="h-full w-full object-cover" loading="lazy">
+        </div>
+        <div>
+          <p class="reveal reveal-delay-1 font-display text-3xl italic leading-snug text-accent sm:text-4xl">
+            Skup się<br>
+            <span class="text-ink">na tym dniu,</span><br>
+            <span class="text-2xl text-muted sm:text-3xl">resztę pozostaw nam...</span>
+          </p>
+          <div class="reveal reveal-delay-2 mt-8 space-y-6 text-base leading-relaxed text-ink/90 sm:text-lg">
+            <div>
+              <h2 class="mb-2 font-sans text-sm font-bold uppercase tracking-[0.18em] text-accent">Jesteśmy firmą rodzinną</h2>
+              <p>
+                Marzymy o tym, by ten dzień był jedyny i niepowtarzalny. Pragniemy
+                pamięć o nim zachować długo, jak najdłużej i to ze wszystkimi szczegółami. Chcielibyśmy
+                opowiadać naszym dzieciom, wnukom jak przeżyliśmy nasz pierwszy wspólny dzień.
+              </p>
+            </div>
+            <div>
+              <h2 class="mb-2 font-sans text-sm font-bold uppercase tracking-[0.18em] text-accent">Zadbamy o Was jak o rodzinę</h2>
+              <p>
+                Zapraszamy do klimatyzowanej Sali Weselnej gdzie niezwykły klimat,
+                fachowa obsługa kucharska i kelnerska zapewnią wspaniałe wspomnienia z uroczystości
+                weselnej. Państwo Młodzi mogą zaprosić do wspólnej zabawy około 200 osób. Dodatkowo
+                gratis proponujemy drugą salę na odpoczynek oraz 5 pokoi noclegowych.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Oferta banner + editorial -->
+    <section id="oferta" class="scroll-mt-24">
+      <div class="relative min-h-[40vh] overflow-hidden sm:min-h-[50vh]">
+        <div class="absolute inset-0 scale-110 bg-cover bg-center" data-parallax data-parallax-speed="0.35"
+          style="background-image: url('./Assets/Images/table.jpg')"></div>
+        <div class="absolute inset-0 bg-ink/45"></div>
+        <div class="relative z-10 flex min-h-[40vh] flex-col items-center justify-center px-4 py-16 text-center text-paper sm:min-h-[50vh]">
+          <h2 class="reveal font-display text-3xl sm:text-5xl">Agata — dom weselny</h2>
+          <p class="reveal reveal-delay-1 mt-3 max-w-xl font-sans text-sm tracking-wide text-paper/85 sm:text-base">
+            Śluby, komunie, chrzciny, konferencje · Raszyn
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-paper px-4 py-14 sm:px-6 sm:py-20">
+        <div class="mx-auto max-w-6xl">
+          <!-- Mobile: horizontal snap -->
+          <div class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 md:hidden" data-offer-mobile>
+            <article class="w-[85%] shrink-0 snap-center">
+              <img src="./Assets/Images/couple1.jpg" alt="Wesela" class="aspect-[4/5] w-full object-cover" loading="lazy">
+              <h3 class="mt-4 font-display text-2xl">Wesela</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">
+                Zbliża się jeden z najpiękniejszych dni Waszego życia, a my jesteśmy po to, by
+                wspomnienia tych chwil na zawsze pozostały w Waszej pamięci. Przygotujemy salę
+                na około 200 gości, zadbamy o klimatyzację, obsługę kuchenną i kelnerską oraz
+                spójną aranżację stołów. Do dyspozycji macie także drugą salę na odpoczynek
+                i 5 pokoi noclegowych — żeby po przyjęciu nikt nie musiał wracać daleko do domu.
+              </p>
+            </article>
+            <article class="w-[85%] shrink-0 snap-center">
+              <img src="./Assets/Images/bible.jpg" alt="Komunie, chrzciny" class="aspect-[4/5] w-full object-cover" loading="lazy">
+              <h3 class="mt-4 font-display text-2xl">Komunie, chrzciny</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">
+                Maj i czerwiec to miesiące Komunii Świętych — ważnych chwil dla dziecka i całej
+                rodziny. U nas przygotujemy przyjęcie w ciepłej, rodzinnej atmosferze: wygodna
+                sala, smaczne menu dostosowane także do młodszych gości oraz spokojna obsługa,
+                która nie przytłacza uroczystości. Organizujemy również chrzciny i inne
+                rodzinne spotkania — od kameralnych po większe grono bliskich.
+              </p>
+            </article>
+            <article class="w-[85%] shrink-0 snap-center">
+              <img src="./Assets/Images/conference.jpg" alt="Konferencje" class="aspect-[4/5] w-full object-cover" loading="lazy">
+              <h3 class="mt-4 font-display text-2xl">Konferencje</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">
+                Sala konferencyjna pod Warszawą, idealna na szkolenia, spotkania firmowe
+                i wydarzenia biznesowe. Zapewniamy przestrzeń do pracy, możliwość ustawienia
+                sali pod Wasz program oraz catering dostosowany do charakteru spotkania.
+                Dogodna lokalizacja w Raszynie ułatwia dojazd z Warszawy i okolic —
+                bez stresu wielkomiejskiego centrum.
+              </p>
+            </article>
+          </div>
+
+          <!-- Desktop: image stage + list -->
+          <div class="reveal hidden gap-12 md:grid md:grid-cols-2 md:items-center" data-offer-desktop>
+            <div class="relative aspect-[4/5] overflow-hidden bg-ink/5">
+              <img data-offer-image src="./Assets/Images/couple1.jpg" alt=""
+                class="offer-image-fade absolute inset-0 h-full w-full object-cover">
+            </div>
+            <div>
+              <p class="mb-8 font-sans text-xs font-bold uppercase tracking-[0.25em] text-accent">Oferta</p>
+              <ul class="space-y-2" data-offer-list>
+                <li>
+                  <button type="button"
+                    class="offer-item is-active w-full border-b border-ink/10 py-5 text-left"
+                    data-offer-item data-image="./Assets/Images/couple1.jpg" data-alt="Wesela">
+                    <span class="flex items-baseline justify-between gap-4">
+                      <span class="offer-title font-display text-3xl">Wesela</span>
+                      <span class="font-sans text-xs tracking-[0.2em] text-muted">01</span>
+                    </span>
+                    <span class="offer-item-line mt-3 block h-px origin-left scale-x-0 transition duration-500"></span>
+                    <span class="offer-desc text-sm leading-relaxed text-muted">
+                      Zbliża się jeden z najpiękniejszych dni Waszego życia, a my jesteśmy po to, by
+                      wspomnienia tych chwil na zawsze pozostały w Waszej pamięci. Przygotujemy salę
+                      na około 200 gości, zadbamy o klimatyzację, obsługę kuchenną i kelnerską oraz
+                      spójną aranżację stołów. Do dyspozycji macie także drugą salę na odpoczynek
+                      i 5 pokoi noclegowych — żeby po przyjęciu nikt nie musiał wracać daleko do domu.
+                    </span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button"
+                    class="offer-item w-full border-b border-ink/10 py-5 text-left"
+                    data-offer-item data-image="./Assets/Images/bible.jpg" data-alt="Komunie, chrzciny">
+                    <span class="flex items-baseline justify-between gap-4">
+                      <span class="offer-title font-display text-3xl">Komunie, chrzciny</span>
+                      <span class="font-sans text-xs tracking-[0.2em] text-muted">02</span>
+                    </span>
+                    <span class="offer-item-line mt-3 block h-px origin-left scale-x-0 transition duration-500"></span>
+                    <span class="offer-desc text-sm leading-relaxed text-muted">
+                      Maj i czerwiec to miesiące Komunii Świętych — ważnych chwil dla dziecka i całej
+                      rodziny. U nas przygotujemy przyjęcie w ciepłej, rodzinnej atmosferze: wygodna
+                      sala, smaczne menu dostosowane także do młodszych gości oraz spokojna obsługa,
+                      która nie przytłacza uroczystości. Organizujemy również chrzciny i inne
+                      rodzinne spotkania — od kameralnych po większe grono bliskich.
+                    </span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button"
+                    class="offer-item w-full border-b border-ink/10 py-5 text-left"
+                    data-offer-item data-image="./Assets/Images/conference.jpg" data-alt="Konferencje">
+                    <span class="flex items-baseline justify-between gap-4">
+                      <span class="offer-title font-display text-3xl">Konferencje</span>
+                      <span class="font-sans text-xs tracking-[0.2em] text-muted">03</span>
+                    </span>
+                    <span class="offer-item-line mt-3 block h-px origin-left scale-x-0 transition duration-500"></span>
+                    <span class="offer-desc text-sm leading-relaxed text-muted">
+                      Sala konferencyjna pod Warszawą, idealna na szkolenia, spotkania firmowe
+                      i wydarzenia biznesowe. Zapewniamy przestrzeń do pracy, możliwość ustawienia
+                      sali pod Wasz program oraz catering dostosowany do charakteru spotkania.
+                      Dogodna lokalizacja w Raszynie ułatwia dojazd z Warszawy i okolic —
+                      bez stresu wielkomiejskiego centrum.
+                    </span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="scroll-mt-24 bg-ink px-4 py-16 text-paper sm:px-6 sm:py-24">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal mb-10 flex flex-col gap-3 sm:mb-14 sm:flex-row sm:items-end sm:justify-between">
+          <h2 class="font-display text-3xl sm:text-5xl">Galeria</h2>
+          <p class="max-w-md text-sm text-paper/70 sm:text-base">
+            Klimat sali, detale i tego, co dzieje się u nas na co dzień.
+          </p>
+        </div>
+
+        <div class="columns-2 gap-3 sm:columns-3 sm:gap-4 lg:columns-4" id="gallery" data-gallery>
+          <!-- photos 28-34, 5-27 -->
+          <a href="./Assets/Photos/default/photo28.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo28.jpg" alt="Galeria — zdjęcie 28" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo29.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo29.jpg" alt="Galeria — zdjęcie 29" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo30.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo30.jpg" alt="Galeria — zdjęcie 30" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo31.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo31.jpg" alt="Galeria — zdjęcie 31" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo32.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo32.jpg" alt="Galeria — zdjęcie 32" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo33.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo33.jpg" alt="Galeria — zdjęcie 33" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo34.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo34.jpg" alt="Galeria — zdjęcie 34" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo5.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo5.jpg" alt="Galeria — zdjęcie 5" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo6.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo6.jpg" alt="Galeria — zdjęcie 6" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo7.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo7.jpg" alt="Galeria — zdjęcie 7" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo8.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo8.jpg" alt="Galeria — zdjęcie 8" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo9.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo9.jpg" alt="Galeria — zdjęcie 9" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo10.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo10.jpg" alt="Galeria — zdjęcie 10" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo11.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo11.jpg" alt="Galeria — zdjęcie 11" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo12.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo12.jpg" alt="Galeria — zdjęcie 12" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo13.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo13.jpg" alt="Galeria — zdjęcie 13" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo14.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo14.jpg" alt="Galeria — zdjęcie 14" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo15.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo15.jpg" alt="Galeria — zdjęcie 15" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo16.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo16.jpg" alt="Galeria — zdjęcie 16" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo17.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo17.jpg" alt="Galeria — zdjęcie 17" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo18.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo18.jpg" alt="Galeria — zdjęcie 18" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo19.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo19.jpg" alt="Galeria — zdjęcie 19" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo20.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo20.jpg" alt="Galeria — zdjęcie 20" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo21.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo21.jpg" alt="Galeria — zdjęcie 21" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo22.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo22.jpg" alt="Galeria — zdjęcie 22" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo23.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo23.jpg" alt="Galeria — zdjęcie 23" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo24.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo24.jpg" alt="Galeria — zdjęcie 24" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo25.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo25.jpg" alt="Galeria — zdjęcie 25" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo26.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo26.jpg" alt="Galeria — zdjęcie 26" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+          <a href="./Assets/Photos/default/photo27.jpg" class="gallery-item mb-3 block break-inside-avoid overflow-hidden sm:mb-4" data-pswp-width="1600" data-pswp-height="1067">
+            <img src="./Assets/Photos/miniatures/photo27.jpg" alt="Galeria — zdjęcie 27" class="w-full object-cover transition duration-700 hover:scale-105" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="scroll-mt-24 px-4 py-16 sm:px-6 sm:py-24">
+      <div class="mx-auto max-w-6xl">
+        <h2 class="reveal mb-10 font-display text-3xl sm:mb-14 sm:text-5xl">Zapraszamy do kontaktu</h2>
+
+        <div class="grid gap-10 lg:grid-cols-2 lg:gap-16">
+          <div class="reveal space-y-5 text-base sm:text-lg">
+            <p class="text-muted">Aleja Krakowska 22a<br>05-090 Raszyn</p>
+            <a href="tel:+48608022184" class="flex items-center gap-3 transition hover:text-accent">
+              <img src="./Assets/Icons/phone.svg" alt="" class="h-5 w-5" width="20" height="20">
+              +48 608-022-184
+            </a>
+            <a href="mailto:kontakt@domweselnyagata.pl" class="flex items-center gap-3 transition hover:text-accent">
+              <img src="./Assets/Icons/message.svg" alt="" class="h-5 w-5" width="20" height="20">
+              kontakt@domweselnyagata.pl
+            </a>
+            <a href="https://www.facebook.com/SalaAgata" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-3 transition hover:text-accent">
+              <img src="./Assets/Icons/fb_logo.svg" alt="" class="h-5 w-5" width="20" height="20">
+              Polub nas na Facebooku
+            </a>
+          </div>
+
+          <div class="reveal reveal-delay-1 overflow-hidden bg-ink/5">
+            <iframe
+              title="Mapa — Dom Weselny Agata"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9791.845400274413!2d20.9200127!3d52.1532126!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb12df62756f65aa9!2sPa%C5%82ac%20Agata!5e0!3m2!1spl!2spl!4v1645378512849!5m2!1spl!2spl"
+              class="aspect-[4/3] w-full min-h-[16rem] border-0 sm:min-h-[22rem]"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div class="reveal mt-12 border-t border-ink/10 pt-10">
+          <p class="mb-4 font-sans text-xs font-bold uppercase tracking-[0.2em] text-accent">Współpraca</p>
+          <a class="block overflow-hidden transition hover:opacity-90"
+            href="https://www.weselezklasa.pl/ogloszenia-weselne/sala-weselna-agata,26293/"
+            target="_blank" rel="noopener noreferrer" title="Sala Weselna Agata — Weselezklasa">
+            <img
+              class="mx-auto w-full max-w-4xl"
+              src="https://www.weselezklasa.pl/banery/Weselezklasa/ogloszenie970x90.gif"
+              alt="Sala Weselna Agata na Weselezklasa.pl">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink px-4 py-10 text-center text-sm text-muted sm:px-6">
+    <div class="mx-auto flex max-w-6xl flex-col items-center gap-2">
+      <p class="text-paper/80">© 2026 Dom Weselny Agata Raszyn · sala weselna</p>
+      <p>
+        Strona stworzona przez
+        <a class="text-paper underline-offset-4 transition hover:text-accent-hover hover:underline"
+          href="https://midnajt.github.io/AddPattern.github.io/" target="_blank" rel="noopener noreferrer">AddPattern</a>
+        Marcin Krzysztoszek —
+        <a class="text-paper underline-offset-4 transition hover:text-accent-hover hover:underline"
+          href="mailto:midnajt0@gmail.com">kontakt</a>
+      </p>
+      <p>
+        <a class="text-paper underline-offset-4 transition hover:text-accent-hover hover:underline"
+          href="./polityka-prywatnosci.html">Polityka prywatności</a>
+      </p>
+    </div>
+  </footer>
+
+  <button type="button" data-up-btn
+    class="fixed bottom-5 right-5 z-40 flex h-12 w-12 scale-0 items-center justify-center rounded-full bg-paper opacity-0 shadow-lg transition duration-300 hover:bg-accent hover:text-paper"
+    aria-label="Wróć do sekcji O nas">
+    <img src="./Assets/Icons/arrowIcon2.svg" alt="" class="h-5 w-5 -rotate-90">
+  </button>
+
+  <div class="consent-banner fixed inset-x-0 bottom-0 z-[60] bg-ink text-paper shadow-[0_-8px_40px_rgba(0,0,0,0.3)]"
+    data-consent-banner role="dialog" aria-modal="false" aria-labelledby="consent-title"
+    aria-describedby="consent-desc" hidden>
+    <div class="mx-auto flex max-w-6xl flex-col items-stretch gap-5 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <div class="text-center sm:text-left">
+        <h2 id="consent-title" class="font-display text-lg text-paper sm:text-xl">
+          Zgoda na pliki cookies i przetwarzanie danych
+        </h2>
+        <p id="consent-desc" class="mt-2 text-sm leading-relaxed text-muted">
+          Korzystamy z plików cookies oraz przetwarzamy dane zgodnie z informacją RODO i
+          <a href="./polityka-prywatnosci.html" class="text-paper underline underline-offset-2 hover:text-accent-hover">polityką prywatności</a>.
+          Aby kontynuować, potwierdź zgodę poniżej.
+        </p>
+      </div>
+      <button type="button" data-consent-accept
+        class="shrink-0 bg-accent px-6 py-3.5 font-sans text-sm font-bold text-paper transition hover:bg-accent-hover">
+        Wyrażam zgodę
+      </button>
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
