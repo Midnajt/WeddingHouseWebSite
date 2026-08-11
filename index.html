@@ -13,31 +13,8 @@
     <link rel="icon" href="./Assets/Icons/favicon.svg">
     <link rel="stylesheet" href="css/lightbox.min.css">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6DM40XW7P"></script>
     <script>
         console.log("%c❤️ Kocham moją przyszłą żonę!", "color: red; font-size: 24px;");
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-X6DM40XW7P');
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-199945119-1">
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-199945119-1');
     </script>
     <style>
         .colaborationItem {
@@ -461,24 +438,42 @@
             </section>
         </main>
         <footer class="footer">
-            <div class="con footer__con">
-                <a class="footer__item" href="./Assets/polityka_prywatnosci.pdf" target="_blank">
-                    Polityka prywatności
-                </a>
-                <a class="footer__item" href="tel:+48 608-022-184" target="_blank">
-                    &copy Dom Weselny Agata
-                </a>
-                <a class="footer__item" href="https://addpattern.it/"
-                    target="_blank">
-                    AddPattern
-                </a>
+            <div class="con footer__bottom">
+                <p class="footer__copy">© 2026 Dom Weselny Agata Raszyn · sala weselna</p>
+                <p class="footer__credit">
+                    Strona stworzona przez
+                    <a class="footer__link" href="https://midnajt.github.io/AddPattern.github.io/"
+                        target="_blank" rel="noopener noreferrer">AddPattern</a>
+                    Marcin Krzysztoszek —
+                    <a class="footer__link" href="mailto:midnajt0@gmail.com">kontakt</a>
+                </p>
+                <p class="footer__meta">
+                    <a class="footer__link" href="./polityka-prywatnosci.html">Polityka prywatności</a>
+                </p>
             </div>
         </footer>
         <div class="upBtn"><img loading="lazy" src="./Assets/Icons/arrowIcon2.svg" alt="arrowIcon" class="upBtn__img">
         </div>
     </div>
+
+    <div class="consent-banner" data-consent-banner role="dialog" aria-modal="false"
+        aria-labelledby="consent-title" aria-describedby="consent-desc" hidden>
+        <div class="consent-banner__inner">
+            <div class="consent-banner__text">
+                <h2 id="consent-title" class="consent-banner__title">Zgoda na pliki cookies i przetwarzanie danych</h2>
+                <p id="consent-desc" class="consent-banner__desc">
+                    Korzystamy z plików cookies oraz przetwarzamy dane zgodnie z informacją RODO i
+                    <a href="./polityka-prywatnosci.html">polityką prywatności</a>.
+                    Aby kontynuować, potwierdź zgodę poniżej.
+                </p>
+            </div>
+            <button type="button" class="consent-banner__btn" data-consent-accept>Wyrażam zgodę</button>
+        </div>
+    </div>
+
     <script src='./src/lightbox-plus-jquery.js'></script>
     <script src="./src/main.js"></script>
+    <script src="./src/consent.js"></script>
 </body>
 
 </html>
