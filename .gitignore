@@ -3,6 +3,6 @@
 .vscode
 .idea
 node_modules
-dist
 package.json
 package-lock.json
+BCP_FTP/

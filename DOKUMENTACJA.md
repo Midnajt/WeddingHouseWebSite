@@ -18,21 +18,25 @@ Bez kart, badge’y i stripów w hero.
 
 | Warstwa | Technologia |
 |--------|-------------|
-| Style | Tailwind 4 przez CDN (`@tailwindcss/browser`) + lokalny [`css/site.css`](css/site.css) |
-| JS | ES modules w [`js/`](js/) |
+| Style | Tailwind 4 przez CDN (`@tailwindcss/browser`) + lokalny [`dist/css/site.css`](dist/css/site.css) |
+| JS | ES modules w [`dist/js/`](dist/js/) |
 | Galeria | PhotoSwipe 5 z jsDelivr CDN |
 | Fonty | Google Fonts: Fraunces + DM Sans |
-| Analityka | GA po zgodzie (`js/consent.js`) |
+| Analityka | GA po zgodzie (`dist/js/consent.js`) |
 
-**Podgląd lokalny:** Live Server na `index.html`.  
-**Deploy:** wgraj HTML/CSS/JS/Assets na FTP — bez `npm` na serwerze.
+**Podgląd lokalny:** Live Server na `dist/index.html`.  
+**Deploy:** wgraj **zawartość** `dist/` do `www/` na OVH — bez `npm` na serwerze.
 
 ```
+dist/
 ├── index.html / polityka-prywatnosci.html
+├── .htaccess / robots.txt / sitemap.xml
 ├── css/site.css
 ├── js/main.js, consent.js, legal.js
 └── Assets/
 ```
+
+Udostępnianie w social media: tagi Open Graph w HTML + `dist/Assets/Images/og-image.jpg` (1200×630, absolutny URL `https://domweselnyagata.pl/...`).
 
 ---
 
@@ -49,7 +53,7 @@ Bez kart, badge’y i stripów w hero.
 | sans | DM Sans | UI, body |
 
 Tokeny Tailwind są w `<style type="text/tailwindcss">` w HTML.  
-Animacje / drawer / consent / oferta — w `css/site.css`.
+Animacje / drawer / consent / oferta — w `dist/css/site.css`.
 
 ---
 
@@ -75,10 +79,12 @@ footer → consent banner
 - Baner Weselezklasa  
 - Consent przed Analytics  
 - Brak Node w deployu  
+- `og:image` jako absolutny HTTPS (Facebook nie czyta ścieżek względnych)  
 
 ## 6. Checklist
 
-1. Live Server → sprawdź wygląd  
-2. FTP → wgraj `index.html`, `polityka-prywatnosci.html`, `css/`, `js/`, `Assets/`, `.htaccess`, `sitemap.xml`  
-3. Nowe zdjęcie galerii → para w `Assets/Photos/miniatures` + `default` + link w HTML  
-4. Zmiana RODO/GA → `js/consent.js` + treść polityki + baner  
+1. Live Server na `dist/index.html` → sprawdź wygląd  
+2. FTP → wgraj **zawartość** `dist/` (w tym `.htaccess`, `robots.txt`, `sitemap.xml`, `Assets/Images/og-image.jpg`)  
+3. Nowe zdjęcie galerii → para w `dist/Assets/Photos/miniatures` + `default` + link w HTML  
+4. Zmiana RODO/GA → `dist/js/consent.js` + treść polityki + baner  
+5. Po wgraniu og-image → odśwież [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)  

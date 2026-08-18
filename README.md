@@ -8,7 +8,9 @@ Strona internetowa Domu Weselnego Agata w Raszynie — elegancka wizytówka sali
 
 ## O projekcie
 
-Statyczna strona (HTML + CSS + JS). **Nie wymaga Node.js** ani budowania — działa z Live Server w Cursor/VS Code i da się wrzucić na FTP jako pliki.
+Statyczna strona (HTML + CSS + JS). **Nie wymaga Node.js** ani budowania.
+
+Gotowe pliki do publikacji są w folderze **`dist/`** — to jedyny katalog, który wgrywasz na FTP.
 
 Szczegóły designu i UX: **[DOKUMENTACJA.md](./DOKUMENTACJA.md)**.
 
@@ -16,8 +18,8 @@ Szczegóły designu i UX: **[DOKUMENTACJA.md](./DOKUMENTACJA.md)**.
 
 | Warstwa | Technologia |
 |--------|-------------|
-| Style | Tailwind CSS 4 (CDN) + `css/site.css` |
-| Skrypty | Vanilla ES modules (`js/`) |
+| Style | Tailwind CSS 4 (CDN) + `dist/css/site.css` |
+| Skrypty | Vanilla ES modules (`dist/js/`) |
 | Galeria | PhotoSwipe 5 (CDN) |
 | Fonty | Fraunces + DM Sans (Google Fonts) |
 | Analityka | Google Analytics (po zgodzie cookies) |
@@ -25,37 +27,43 @@ Szczegóły designu i UX: **[DOKUMENTACJA.md](./DOKUMENTACJA.md)**.
 ## Lokalny podgląd
 
 1. Otwórz projekt w Cursor.
-2. Uruchom **Live Server** na `index.html`.
+2. Uruchom **Live Server** na `dist/index.html`.
 
 Nie trzeba `npm install` ani `npm run build`.
 
-## Deploy na FTP
+## Deploy na FTP (OVH Cloud)
 
-Wgraj na serwer (zachowując strukturę katalogów):
+Wgraj **zawartość** `dist/` do katalogu `www/` na serwerze (nie sam folder `dist`):
 
 ```
+.htaccess
 index.html
 polityka-prywatnosci.html
+robots.txt
 sitemap.xml
-.htaccess
 css/
 js/
 Assets/
 ```
 
-Folderów `node_modules`, `dist`, `src` już nie ma — nie są potrzebne.
+W FileZilli włącz pokazywanie ukrytych plików — `.htaccess` musi leżeć obok `index.html`.
+
+Po publikacji odśwież podgląd Facebooka: [Sharing Debugger](https://developers.facebook.com/tools/debug/).
 
 ## Struktura
 
 ```
-├── index.html
-├── polityka-prywatnosci.html
-├── css/site.css          # animacje, drawer, consent, oferta
-├── js/
-│   ├── main.js           # nav, motion, oferta, PhotoSwipe
-│   ├── consent.js        # cookies + GA
-│   └── legal.js          # entry strony polityki
-└── Assets/               # zdjęcia, wideo, ikony
+├── dist/                         # to wgrywasz na FTP
+│   ├── index.html
+│   ├── polityka-prywatnosci.html
+│   ├── .htaccess                 # HTTP → HTTPS, www → bez www
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   ├── css/site.css
+│   ├── js/
+│   └── Assets/                   # zdjęcia, wideo, ikony, og-image.jpg
+├── README.md
+└── DOKUMENTACJA.md
 ```
 
 ## Autor

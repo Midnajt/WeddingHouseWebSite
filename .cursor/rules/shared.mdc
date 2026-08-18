@@ -1,0 +1,6 @@
+---
+alwaysApply: true
+---
+
+Strona ma być dostępna pod adresem https://domweselnyagata.pl i jest hostowana przez OVH Cloud.
+Na FTP wgrywać zawartość folderu `dist/` do katalogu `www/`.

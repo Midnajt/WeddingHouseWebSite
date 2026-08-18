@@ -1,0 +1,15 @@
+# OVH Cloud (Apache) — wgraj zawartość folderu dist/ do katalogu www
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # HTTP → HTTPS (na OVH działa %{ENV:HTTPS}, nie %{HTTPS})
+  RewriteCond %{ENV:HTTPS} !on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # www → https://domweselnyagata.pl
+  RewriteCond %{HTTP_HOST} ^www\.domweselnyagata\.pl$ [NC]
+  RewriteRule ^ https://domweselnyagata.pl%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+Options -Indexes
+DirectoryIndex index.html
