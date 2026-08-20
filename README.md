@@ -68,4 +68,4 @@ Po publikacji odśwież podgląd Facebooka: [Sharing Debugger](https://developer
 
 ## Autor
 
-Strona: [AddPattern](https://midnajt.github.io/AddPattern.github.io/) · Marcin Krzysztoszek
+Strona: [AddPattern](https://addpattern.pl) · Marcin Krzysztoszek
