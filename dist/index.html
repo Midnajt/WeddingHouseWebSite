@@ -68,6 +68,7 @@
     <ul class="flex flex-col gap-6 font-display text-3xl text-accent">
       <li><a href="#onas" data-nav-link class="transition hover:text-ink">O nas</a></li>
       <li><a href="#oferta" data-nav-link class="transition hover:text-ink">Oferta</a></li>
+      <li><a href="#sylwester" data-nav-link class="transition hover:text-ink">Sylwester</a></li>
       <li><a href="#galeria" data-nav-link class="transition hover:text-ink">Galeria</a></li>
       <li><a href="#kontakt" data-nav-link class="transition hover:text-ink">Kontakt</a></li>
     </ul>
@@ -109,9 +110,10 @@
         <span class="font-display text-lg text-ink sm:text-xl">Agata</span>
       </a>
 
-      <ul class="hidden items-center gap-8 font-sans text-sm font-medium tracking-wide text-accent md:flex">
+      <ul class="hidden items-center gap-6 font-sans text-sm font-medium tracking-wide text-accent lg:gap-8 md:flex">
         <li><a href="#onas" data-nav-link class="transition hover:text-ink">O nas</a></li>
         <li><a href="#oferta" data-nav-link class="transition hover:text-ink">Oferta</a></li>
+        <li><a href="#sylwester" data-nav-link class="transition hover:text-ink">Sylwester</a></li>
         <li><a href="#galeria" data-nav-link class="transition hover:text-ink">Galeria</a></li>
         <li><a href="#kontakt" data-nav-link class="transition hover:text-ink">Kontakt</a></li>
       </ul>
@@ -280,6 +282,34 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Sylwester -->
+    <section id="sylwester" class="scroll-mt-24 px-4 py-16 sm:px-6 sm:py-24">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal mb-10 flex flex-col gap-3 text-center sm:mb-14">
+          <h2 class="font-display text-3xl text-ink sm:text-5xl">Bal Sylwestrowy</h2>
+          <p class="mx-auto max-w-xl text-sm text-muted sm:text-base">
+            Zabawa od 20:00 do 5:00 · 5 dań · napoje bez limitu · DJ i wodzirej
+          </p>
+        </div>
+        <div class="reveal reveal-delay-1 mx-auto max-w-xl" data-newyear-gallery>
+          <a href="./Assets/Images/new-year.jpg"
+            class="block overflow-hidden shadow-[0_12px_40px_rgba(37,37,37,0.18)] transition duration-500 hover:shadow-[0_16px_48px_rgba(37,37,37,0.28)]"
+            data-pswp-width="1206" data-pswp-height="1808"
+            aria-label="Powiększ ulotkę Balu Sylwestrowego">
+            <img src="./Assets/Images/new-year.jpg"
+              alt="Ulotka — Bal Sylwestrowy Sala Agata w Raszynie"
+              class="w-full" loading="lazy" width="1206" height="1808">
+          </a>
+        </div>
+        <p class="reveal reveal-delay-2 mt-8 text-center text-sm text-muted">
+          Rezerwacje:
+          <a href="tel:+48608022184" class="text-ink underline-offset-4 transition hover:text-accent hover:underline">608-022-184</a>
+          ·
+          <a href="mailto:kontakt@domweselnyagata.pl" class="text-ink underline-offset-4 transition hover:text-accent hover:underline">kontakt@domweselnyagata.pl</a>
+        </p>
       </div>
     </section>
 
@@ -461,6 +491,22 @@
     aria-label="Wróć do sekcji O nas">
     <img src="./Assets/Icons/arrowIcon2.svg" alt="" class="h-5 w-5 -rotate-90">
   </button>
+
+  <div class="newyear-popup fixed inset-0 z-[70]"
+    data-newyear-popup role="dialog" aria-modal="true" aria-label="Bal Sylwestrowy — ulotka" hidden>
+    <button type="button" class="newyear-popup__backdrop" data-newyear-close
+      aria-label="Zamknij okno oferty sylwestrowej"></button>
+    <button type="button" class="newyear-popup__close" data-newyear-close aria-label="Zamknij">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="newyear-popup__panel">
+      <a href="#sylwester" data-newyear-goto class="newyear-popup__link">
+        <img src="./Assets/Images/new-year.jpg"
+          alt="Ulotka — Bal Sylwestrowy Sala Agata w Raszynie"
+          class="newyear-popup__img" width="1206" height="1808">
+      </a>
+    </div>
+  </div>
 
   <div class="consent-banner fixed inset-x-0 bottom-0 z-[60] bg-ink text-paper shadow-[0_-8px_40px_rgba(0,0,0,0.3)]"
     data-consent-banner role="dialog" aria-modal="false" aria-labelledby="consent-title"

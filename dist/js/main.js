@@ -41,7 +41,13 @@ closeBtn?.addEventListener("click", closeDrawer);
 backdrop?.addEventListener("click", closeDrawer);
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeDrawer();
+  if (e.key !== "Escape") return;
+  const popup = document.querySelector("[data-newyear-popup]");
+  if (popup?.classList.contains("is-visible")) {
+    closeNewYearPopup();
+    return;
+  }
+  closeDrawer();
 });
 
 document.querySelectorAll("[data-nav-link]").forEach((link) => {
@@ -159,6 +165,67 @@ if (gallery) {
       import("https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.esm.min.js"),
   });
   lightbox.init();
+}
+
+const newYearGallery = document.querySelector("[data-newyear-gallery]");
+if (newYearGallery) {
+  const newYearLightbox = new PhotoSwipeLightbox({
+    gallery: "[data-newyear-gallery]",
+    children: "a",
+    pswpModule: () =>
+      import("https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.esm.min.js"),
+  });
+  newYearLightbox.init();
+}
+
+const NEW_YEAR_POPUP_KEY = "dw_agata_sylwester_2026";
+const newYearPopup = document.querySelector("[data-newyear-popup]");
+
+function openNewYearPopup() {
+  if (!newYearPopup) return;
+  newYearPopup.hidden = false;
+  requestAnimationFrame(() => {
+    newYearPopup.classList.add("is-visible");
+  });
+  document.body.classList.add("newyear-popup-open");
+}
+
+function closeNewYearPopup() {
+  if (!newYearPopup) return;
+  newYearPopup.classList.remove("is-visible");
+  document.body.classList.remove("newyear-popup-open");
+  window.setTimeout(() => {
+    newYearPopup.hidden = true;
+  }, 350);
+  try {
+    localStorage.setItem(NEW_YEAR_POPUP_KEY, "1");
+  } catch {
+    /* ignore */
+  }
+}
+
+newYearPopup?.querySelectorAll("[data-newyear-close]").forEach((btn) => {
+  btn.addEventListener("click", closeNewYearPopup);
+});
+
+newYearPopup?.querySelectorAll("[data-newyear-goto]").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    closeNewYearPopup();
+    window.setTimeout(() => scrollToTarget("#sylwester"), 120);
+  });
+});
+
+if (newYearPopup) {
+  let dismissed = false;
+  try {
+    dismissed = localStorage.getItem(NEW_YEAR_POPUP_KEY) === "1";
+  } catch {
+    dismissed = false;
+  }
+  if (!dismissed) {
+    window.setTimeout(openNewYearPopup, 900);
+  }
 }
 
 console.log("%c❤️ Kocham moją przyszłą żonę!", "color: red; font-size: 24px;");

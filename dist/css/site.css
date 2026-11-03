@@ -161,3 +161,88 @@ body.drawer-open {
 [data-parallax] {
   will-change: transform;
 }
+
+.newyear-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.newyear-popup.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.newyear-popup[hidden] {
+  display: none !important;
+}
+
+.newyear-popup__backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  cursor: zoom-out;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.newyear-popup__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.newyear-popup__close:hover {
+  opacity: 1;
+}
+
+.newyear-popup__panel {
+  position: relative;
+  z-index: 1;
+  max-width: min(100vw - 2rem, 28rem);
+  max-height: calc(100vh - 2rem);
+  transform: scale(0.96);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.newyear-popup.is-visible .newyear-popup__panel {
+  transform: scale(1);
+}
+
+.newyear-popup__link {
+  display: block;
+  cursor: zoom-out;
+}
+
+.newyear-popup__img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 2rem);
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  box-shadow: none;
+}
+
+body.newyear-popup-open {
+  overflow: hidden;
+}

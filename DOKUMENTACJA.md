@@ -61,8 +61,8 @@ Animacje / drawer / consent / oferta — w `dist/css/site.css`.
 
 ```
 hero video → sticky nav / drawer
-#onas → #oferta → #galeria → #kontakt (+ Weselezklasa)
-footer → consent banner
+#onas → #oferta → #sylwester → #galeria → #kontakt (+ Weselezklasa)
+footer → popup sylwestrowy (raz / localStorage) → consent banner
 ```
 
 - **Oferta:** mobile = snap-scroll; desktop = lista + podmiana zdjęcia  
